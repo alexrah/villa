@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="3.0" type="plugin" group="system">
+	<name>System - GK Contact</name>
+	<author>www.gavick.com</author>
+	<creationDate>04 June 2013</creationDate>
+	<copyright>All Rights Reserved.</copyright>
+	<license>license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<authorEmail>info@gavick.com</authorEmail>
+	<authorUrl>https://www.gavick.com</authorUrl>
+	<version>1.1</version>
+	<description>PLG_GKCONTACT</description>	
+	<files>
+		<filename plugin="plg_gkcontact">plg_gkcontact.php</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_system_gkcontact.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_system_gkcontact.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="form">
+				<field name="name_field" type="radio"
+					description="PLG_GKCONTACT_NAME_FIELD_DESC"
+					label="PLG_GKCONTACT_NAME_FIELD"
+					default="1"
+				>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field name="email_field" type="radio"
+					description="PLG_GKCONTACT_EMAIL_FIELD_DESC"
+					label="PLG_GKCONTACT_EMAIL_FIELD"
+					default="1"
+				>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+
+				<field name="title_field" type="radio"
+					description="PLG_GKCONTACT_TITLE_FIELD_DESC"
+					label="PLG_GKCONTACT_TITLE_FIELD"
+					default="1"
+				>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field name="use_recaptcha" type="radio"
+					description="PLG_GKCONTACT_USE_RECAPTCHA_DESC"
+					label="PLG_GKCONTACT_USE_RECAPTCHA"
+					default="1"
+				>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+			</fieldset>
+			<fieldset name="address">
+				<field name="show_address_area" type="radio"
+					description="PLG_GKCONTACT_SHOW_ADDRESS_AREA_DESC"
+					label="PLG_GKCONTACT_SHOW_ADDRESS_AREA"
+					default="1"
+				>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field name="address_title" type="text"
+					description="PLG_GKCONTACT_ADDRESS_TITLE_DESC"
+					label="PLG_GKCONTACT_ADDRESS_TITLE"
+					default=""
+				/>
+				
+				<field name="address_value" type="textarea"
+					description="PLG_GKCONTACT_ADDRESS_VALUE_DESC"
+					label="PLG_GKCONTACT_ADDRESS_VALUE"
+					default=""
+					rows="10"
+					cols="30"
+					filter="raw"
+				/>
+				
+				<field name="address_footer" type="text"
+					description="PLG_GKCONTACT_ADDRESS_FOOTER_DESC"
+					label="PLG_GKCONTACT_ADDRESS_FOOTER"
+					default=""
+				/>
+				
+				<field name="fb_url" type="text"
+					description="PLG_GKCONTACT_FB_URL_DESC"
+					label="PLG_GKCONTACT_FB_URL"
+					default=""
+				/>
+				
+				<field name="twitter_url" type="text"
+					description="PLG_GKCONTACT_TWITTER_URL_DESC"
+					label="PLG_GKCONTACT_TWITTER_URL"
+					default=""
+				/>
+				
+				<field name="gplus_url" type="text"
+					description="PLG_GKCONTACT_GPLUS_URL_DESC"
+					label="PLG_GKCONTACT_GPLUS_URL"
+					default=""
+				/>
+				
+				<field name="linkedin_url" type="text"
+					description="PLG_GKCONTACT_LINKEDIN_URL_DESC"
+					label="PLG_GKCONTACT_LINKEDIN_URL"
+					default=""
+				/>
+				
+				<field name="pinterest_url" type="text"
+					description="PLG_GKCONTACT_PINTEREST_URL_DESC"
+					label="PLG_GKCONTACT_PINTEREST_URL"
+					default=""
+				/>
+				
+				<field name="rss_url" type="text"
+					description="PLG_GKCONTACT_RSS_URL_DESC"
+					label="PLG_GKCONTACT_RSS_URL"
+					default=""
+				/>
+			</fieldset>
+			
+			<fieldset name="config">
+				<field name="emails" type="text"
+					description="PLG_GKCONTACT_EMAILS_DESC"
+					label="PLG_GKCONTACT_EMAILS"
+					default=""
+				/>
+				
+				<field name="title" type="text"
+					description="PLG_GKCONTACT_TITLE_DESC"
+					label="PLG_GKCONTACT_TITLE"
+					default=""
+				/>
+			</fieldset>
+		</fields>
+	</config>
+</install>

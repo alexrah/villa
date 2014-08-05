@@ -1,0 +1,203 @@
+/*
+#------------------------------------------------------------------------
+# Creativity - May Joomla! template (for Joomla 2.5)
+#
+# Copyright (C) 2007-2013 Gavick.com. All Rights Reserved.
+# License: Copyrighted Commercial Software
+# Website: http://www.gavick.com
+# Support: support@gavick.com 
+*/
+ 
+/* Style 2 */
+
+/* template.css */
+html {
+	background: #4693dd;
+}
+a,
+#gkMainMenu div.childcontent a:active,
+#gkMainMenu div.childcontent a:focus,
+#gkMainMenu div.childcontent a:hover,
+article header h1 a:hover,
+article header h2 a:hover,
+.pane-sliders .panel h3 a:hover {
+	color: #68b5ff;
+}
+#gkBottom2 {
+	background: #68b5ff;
+}
+.breadcrumbs > ul > li a:hover {
+	color: #68b5ff;
+}
+#gkFooter {
+	background: #4693dd;
+	border-top: 1px solid #57a4ee;
+	color: #bbddfe;
+}
+#gkFooter a {
+	color: #c6cfff;
+}
+.box.dark a:active,
+.box.dark a:focus,
+.box.dark a:hover {
+	color:#c2e1fe;
+}
+.box.color,
+#gkBottom2 .box {
+	background: #68b5ff!important;
+	color:#d2e8fe;
+}
+.box.color a:active,
+.box.color a:focus,
+.box.color a:hover,
+#gkBottom2 .box a:active,
+#gkBottom2 .box a:focus,
+#gkBottom2 .box a:hover {
+	color: #c9d9ff!important;
+}
+.box.colortitle .header {
+	color: #68b5ff;
+}
+
+/* joomla.css */
+.bigbutton,
+button,
+.button,
+.button.inverse:active,
+.button.inverse:focus,
+.button.inverse:hover,
+input.button,
+span.button,
+button.button,
+div.button,
+input[type="submit"],
+input[type="button"],
+.gkPriceTable dd a {
+	background: #68b5ff;
+}
+button:hover,
+.button:hover,
+.button.inverse,
+input.button:hover,
+span.button:hover,
+button.button:hover,
+div.button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+.gkPriceTable dd a:hover {
+	background: #4693dd;
+}
+.border:hover,
+.gkPriceTable dd a:hover {
+	background: #68b5ff!important;
+	border-color: #68b5ff!important;
+	color: #fff!important;
+}
+#gkBottom2 .box .border:hover {
+	color: #68b5ff!important;
+}
+th a:active,
+th a:focus,
+th a:hover {
+	color: #68b5ff!important;
+}
+article header.itemHasImage h1 a:active,
+article header.itemHasImage h1 a:focus,
+article header.itemHasImage h1 a:hover {
+	color: #68b5ff!important;
+}
+article header li a:hover {
+	color: #68b5ff
+}
+.tip-title {
+	background: #68b5ff;
+}
+.autocompleter-queried {
+	color: #68b5ff!important
+}
+.box.menu li:hover:before;
+.box .k2ArchivesBlock li:before {
+	color: #68b5ff;
+}
+.box.menu li a:hover {
+	color: #68b5ff;
+}
+div.bannerfooter {
+	color: #68b5ff;
+} 
+
+/* gk_stuff.css */
+.nspPagination li:hover,
+.nspPagination li.active { 
+	background-color: #68b5ff;
+}
+.box.color .readon {
+	background: #9be8ff;
+}
+.gkNspPM-Portfolio .gkImagesWrapper > a > .gkImgOverlay > span {
+	background: #68b5ff;
+}
+.gkTabsWrap ol li.active,
+.gkTabsWrap ol li.active:hover {
+	 border-bottom: 1px solid #68b5ff;
+	 color: #68b5ff;
+}
+.gkTabsWrap ol li:hover { 
+	color: #68b5ff; 
+}
+.gkContactSocialIcons > a:hover:before {
+	background: #68b5ff;
+	border-color: #68b5ff;
+}
+.gkTeamOverlay {
+	background: #68b5ff;
+}
+.gkTeamOverlay a:hover {
+	background: #2471bb;
+}
+
+/* menu.css */
+.gkMenu a:hover,
+.gkMenu a:active,
+.gkMenu a:focus,
+.gkMenu li.active > a {
+	color: #68b5ff;
+}
+
+/* k2.css */
+.activeCategory a {
+	color: #68b5ff
+}
+h1 > sup, h2 > sup {
+	background: #68b5ff;
+}
+span#formLog {
+	background: #68b5ff;
+}
+.itemTags li a:hover, .k2TagCloudBlock a:hover, .moduleItemTags a:hover, div.tags a:hover {
+	background: #68b5ff;
+}
+.k2CalendarBlock table.calendar tr td.calendarDateLinked a:hover {
+	background: #68b5ff;
+}
+.k2CalendarBlock table.calendar tr td.calendarToday {
+	background: #68b5ff;
+}
+table.calendar tr td.calendarTodayLinked a {
+	color: #68b5ff;
+}
+.k2CalendarBlock table.calendar tr td.calendarTodayLinked a:hover {
+	background: #68b5ff;
+}
+.calendarNavLink {
+	color: #68b5ff;
+}
+
+/* Image Show CSS */
+.gkIsWrapperFixed {
+	background: #68b5ff!important;
+}
+
+.gkIsWrapper-gk_creativity .figcaption > a:hover {
+	color: #68b5ff!important;
+}

@@ -1,0 +1,209 @@
+/*
+#------------------------------------------------------------------------
+# Creativity - May Joomla! template (for Joomla 2.5)
+#
+# Copyright (C) 2007-2013 Gavick.com. All Rights Reserved.
+# License: Copyrighted Commercial Software
+# Website: http://www.gavick.com
+# Support: support@gavick.com 
+*/
+ 
+/* Style 1 */
+
+/* template.css */
+html {
+	background: #5a69de;
+}
+a,
+#gkMainMenu div.childcontent a:active,
+#gkMainMenu div.childcontent a:focus,
+#gkMainMenu div.childcontent a:hover,
+article header h1 a:hover,
+article header h2 a:hover,
+.pane-sliders .panel h3 a:hover {
+	color: #7484ff;
+}
+#gkBottom2 {
+	background: #7484ff;
+}
+.breadcrumbs > ul > li a:hover {
+	color: #7484FF
+}
+#gkFooter {
+	background: #5a69de;
+	border-top: 1px solid #707ff4;
+	color: #a4aeff;
+}
+#gkFooter a {
+	color: #c6cfff;
+}
+.box.dark a:active,
+.box.dark a:focus,
+.box.dark a:hover {
+	color: #7484ff!important;
+}
+.box.color,
+#gkBottom2 .box {
+	background: #7484ff!important;
+	color: #c9d9ff!important;
+}
+.box.color a:active,
+.box.color a:focus,
+.box.color a:hover,
+#gkBottom2 .box a:active,
+#gkBottom2 .box a:focus,
+#gkBottom2 .box a:hover {
+	color: #c9d9ff!important;
+}
+.box.colortitle .header {
+	color: #7484ff;
+}
+
+/* joomla.css */
+.bigbutton,
+button,
+.button,
+.button.inverse:active,
+.button.inverse:focus,
+.button.inverse:hover,
+input.button,
+span.button,
+button.button,
+div.button,
+input[type="submit"],
+input[type="button"],
+.gkPriceTable dd a {
+	background: #7484ff;
+}
+button:hover,
+.button:hover,
+.button.inverse,
+input.button:hover,
+span.button:hover,
+button.button:hover,
+div.button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+.gkPriceTable dd a:hover {
+	background: #5a69de;
+}
+.border:hover,
+.gkPriceTable dd a:hover {
+	background: #7484ff!important;
+	border-color: #7484ff!important;
+	color: #fff!important;
+}
+.gkPriceTable dd a:hover {
+	background: #fff!important;
+	border-color: #fff!important;
+	color: #7484ff!important;
+}
+#gkBottom2 .box .border:hover {
+	color: #7484ff!important;
+}
+th a:active,
+th a:focus,
+th a:hover {
+	color: #7484ff!important;
+}
+article header.itemHasImage h1 a:active,
+article header.itemHasImage h1 a:focus,
+article header.itemHasImage h1 a:hover {
+	color: #7484ff!important;
+}
+article header li a:hover {
+	color: #7484ff
+}
+.tip-title {
+	background: #7484ff;
+}
+.autocompleter-queried {
+	color: #7484ff!important
+}
+.box.menu li:hover:before;
+.box .k2ArchivesBlock li:before {
+	color: #7484ff;
+}
+.box.menu li a:hover {
+	color: #7484FF;
+}
+div.bannerfooter {
+	color: #7484FF;
+} 
+
+/* gk_stuff.css */
+.nspPagination li:hover,
+.nspPagination li.active { 
+	background-color: #7484ff;
+}
+.box.color .readon {
+	background: #96a6ff;
+}
+.gkNspPM-Portfolio .gkImagesWrapper > a > .gkImgOverlay > span {
+	background: #7484ff;
+}
+.gkTabsWrap ol li.active,
+.gkTabsWrap ol li.active:hover {
+	 border-bottom: 1px solid #7484ff;
+	 color: #7484ff;
+}
+.gkTabsWrap ol li:hover { 
+	color: #7484ff; 
+}
+.gkContactSocialIcons > a:hover:before {
+	background: #7484ff;
+	border-color: #7484ff;
+}
+.gkTeamOverlay {
+	background: #7484ff;
+}
+.gkTeamOverlay a:hover {
+	background: #6675e6;
+}
+
+/* menu.css */
+.gkMenu a:hover,
+.gkMenu a:active,
+.gkMenu a:focus,
+.gkMenu li.active > a {
+	color: #7484ff;
+}
+
+/* k2.css */
+.activeCategory a {
+	color: #7484ff
+}
+h1 > sup, h2 > sup {
+	background: #7484ff;
+}
+span#formLog {
+	background: #7484ff;
+}
+.itemTags li a:hover, .k2TagCloudBlock a:hover, .moduleItemTags a:hover,
+div.tags a:hover {
+	background: #7484ff;
+}
+.k2CalendarBlock table.calendar tr td.calendarDateLinked a:hover {
+	background: #7484ff;
+}
+.k2CalendarBlock table.calendar tr td.calendarToday {
+	background: #7484ff;
+}
+table.calendar tr td.calendarTodayLinked a {
+	color: #7484ff;
+}
+.k2CalendarBlock table.calendar tr td.calendarTodayLinked a:hover {
+	background: #7484ff;
+}
+.calendarNavLink {
+	color: #7484ff;
+}
+
+/* Image Show CSS */
+.gkIsWrapperFixed {
+	background: #7484ff!important;
+}
+
+.gkIsWrapper-gk_creativity .figcaption > a:hover {
+	color: #7484ff!important;
+}

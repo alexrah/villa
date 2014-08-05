@@ -1,0 +1,804 @@
+/*
+#------------------------------------------------------------------------
+# Creativity - May Joomla! template (for Joomla 2.5)
+#
+# Copyright (C) 2007-2013 Gavick.com. All Rights Reserved.
+# License: Copyrighted Commercial Software
+# Website: http://www.gavick.com
+# Support: support@gavick.com 
+*/
+
+/* Basic elements */
+
+html {
+	background: #5a69de;
+	-webkit-font-smoothing: antialiased;
+	height: 100%;
+	min-height: 100%;
+}
+body {
+	color: #666;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 1.9;
+	height: 100%;
+	margin: 0;
+	min-height: 100%;
+	padding: 0;
+	word-wrap: break-word;
+}
+a,
+#gkMainMenu div.childcontent a:active,
+#gkMainMenu div.childcontent a:focus,
+#gkMainMenu div.childcontent a:hover,
+article header h1 a:hover,
+article header h2 a:hover,
+.pane-sliders .panel h3 a:hover {
+	color: #7484ff;
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+	text-decoration: none;
+}
+a:hover,
+a:active,
+a:focus,
+#gkMainMenu div.childcontent a,
+article header h1 a,
+article header h2 a,
+.pane-sliders .panel h3 a {
+	color: #333;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: #333;
+	font-weight: 400;
+	line-height: 1.2;
+	margin: 0 0 12px 0;
+	padding: 0;
+}
+h1 {
+	font-size: 52px;
+	font-weight: 300;
+	margin: 0 0 24px 0;
+}
+h2,
+.componentheading {
+	font-size: 42px;
+	font-weight: 300;
+	margin: 0 0 18px 0;
+}
+h3 {
+	font-size: 30px;
+}
+h4 {
+	font-size: 22px;
+}
+h5 {
+	font-size: 17px;
+}
+h6 {
+	font-size: 13px;
+}
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+ul li {
+	line-height: 2.0;
+}
+p {
+	margin: 0.5em 0 1.5em;
+}
+iframe {
+	max-width: 100%!important;
+}
+/* Containers */
+div.gk-intro {
+	height: 100%;
+	position: relative;
+}
+#gkContent {
+	padding: 0 0 30px 0;
+}
+#gkContentWrapper {
+	background: #fff;
+	position: relative;
+	z-index: 50;
+}
+#gkContentWrapper.noIntro {
+	padding: 75px 0 0 0;
+}
+#gkPageContentWrap {
+	background: #fff;
+	padding: 60px 0 0 0;
+}
+#gkInset,
+#gkSidebar {
+	font-size: 14px;
+}
+.gkPage {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0 auto!important;
+	padding: 0;
+}
+#gkHeader {
+	background: #f8f8f8;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+	margin-top: -60px;
+	margin-bottom: 30px;
+}
+.onepage #gkHeader {
+	margin-bottom: 0;
+}
+#gkPageWrap {
+	margin: 0 auto;
+}
+#gkContent,
+#gkPageContent,
+#gkPageCotnentWrap {
+	width: 100%;
+}
+#gkPageContent {
+	margin-bottom: 30px!important;
+}
+.gridpage #gkPageContent {
+	margin-bottom: 14px!important;
+}
+#gkPageContent + #gkFooter {
+	margin-top: 20px;
+}
+/* Logo  */
+
+.gkLogo {
+	float: left;
+	margin: 0;
+}
+#gkLogo {
+	margin: 0;
+	padding: 0;
+	text-indent: -999em;
+	text-shadow: none;
+	width: 130px;
+	display: block;
+	float: left;
+	-webkit-transition: background-color .3s linear;
+	-moz-transition: background-color .3s linear;
+	-ms-transition: background-color .3s linear;
+	-o-transition: background-color .3s linear;
+	transition: background-color .3s linear;
+}
+#gkLogo img {
+	display: block;
+	margin: 0;
+}
+#gkLogo.cssLogo {
+	background: transparent url('../images/logo.png') no-repeat 0 0;
+	/* You can specify there logo size and background */
+	height: 74px;
+	width: 130px;
+}
+#gkLogo.text {
+	color: #333;
+	display: block;
+	height: auto;
+	margin: 0;
+	overflow: hidden;
+	padding: 25px 5px 5px 0;
+	text-align: center;
+	text-indent: 0;
+	width: auto;
+}
+#gkLogo.text > span {
+	display: block;
+	font-size: 22px;
+	font-weight: bold;
+	line-height: 24px;
+	padding: 0;
+	text-transform: uppercase;
+}
+#gkLogo.text .gkLogoSlogan {
+	color: #fa9556;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 20px;
+	text-align: center;
+}
+/* Top */
+#gkTop {
+	background: #fff;
+	border-bottom: 1px solid #eee;
+	min-height: 75px;
+	position: fixed;
+	top: 0;
+	-webkit-transition: all .3s ease-out;
+	-moz-transition: all .3s ease-out;
+	-ms-transition: all .3s ease-out;
+	-o-transition: all .3s ease-out;
+	transition: all .3s ease-out;
+	width: 100%;
+	z-index: 999;
+}
+#gkTop.isIntro {
+	top: -200px;
+}
+/* Userarea */
+#gkUserArea {
+	float: right;
+}
+#gkUserArea .button {
+	color: #333!important;
+	float: right;
+	margin: 20px 0 0 26px;
+}
+#gkUserArea .button:hover {
+	color: #fff!important;
+}
+/* Stylearea */
+
+#gkStyleArea {
+	display: block;
+	float: right;
+	line-height: 10px;
+	margin: 34px 0 0 15px;
+	padding: 0!important;
+	text-align: center;
+}
+#gkStyleArea a {
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	display: inline-block;
+	height: 8px;
+	margin: 7px 0 0 1px;
+	text-indent: -9999px;
+	-webkit-transform: scale(1.0);
+	-moz-transform: scale(1.0);
+	-ms-transform: scale(1.0);
+	-o-transform: scale(1.0);
+	transform: scale(1.0);
+	-webkit-transition: -webkit-transform 0.2s ease-out;
+	-moz-transition: -moz-transform 0.2s ease-out;
+	-o-transition: -o-transform 0.2s ease-out;
+	transition: transform 0.2s ease-out;
+	width: 8px;
+}
+#gkStyleArea a:first-child {
+	margin-left: 0;
+}
+#gkStyleArea a:hover {
+	-webkit-transform: scale(1.5);
+	moz-transform: scale(1.5);
+	-ms-transform: scale(1.5);
+	-o-transform: scale(1.5);
+	transform: scale(1.5);
+}
+#gkColor1 {
+	background: #7484ff;
+}
+#gkColor2 {
+	background: #68b5ff;
+}
+#gkColor3 {
+	background: #81ac8b;
+}
+#gkColor4 {
+	background: #ff7f66;
+}
+#gkColor5 {
+	background: #fa9556;
+}
+#gkColor6 {
+	background: #ff8598;
+}
+
+/* Group modules */
+
+#gkBottom1,
+#gkBottom2 {
+	overflow: hidden;
+	padding: 64px 0 40px 0;
+}
+#gkBottom2 {
+	background: #7484ff;
+}
+/* standard breadcrumb */
+
+#gkBreadcrumb {
+	border-bottom: 1px solid #eee;
+	overflow: hidden;
+	padding: 36px 0
+}
+#gkBreadcrumb .breadcrumbs {
+	float: left;
+}
+.breadcrumbs li.separator {
+	color: #ccc;
+	font-size: 16px;
+	font-weight: 300;
+	padding: 13px 10px!important;
+}
+.breadcrumbs > ul > li {
+	color: #fff;
+	float: left;
+	font-size: 28px;
+	font-weight: 300;
+}
+.breadcrumbs > ul > li a {
+	color: #fff
+}
+.breadcrumbs > ul > li a:hover {
+	color: #7484FF
+}
+#gkTools {
+	float: right;
+	margin: 4px 0 0 10px;
+}
+/* footer */
+
+#gkFooter {
+	background: #5a69de;
+	border-top: 1px solid #707ff4;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+	color: #a4aeff;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 90px;
+	padding: 0;
+}
+#gkFooter > div > div {
+	padding: 0;
+}
+#gkFooterNav {
+	float: left;
+}
+#gkFooterNav li {
+	border: none;
+	float: left;
+	line-height: 90px;
+	margin: 0 16px 0 0!important;
+	padding: 0;
+	text-transform: uppercase;
+}
+#gkFooter a {
+	color: #c6cfff;
+}
+#gkFooter li:hover,
+#gkFooter a:hover {
+	color: #fff;
+}
+#gkCopyrights {
+	float: right;
+	margin: 0;
+	padding: 0;
+}
+/* Other footer elements */
+
+#gkFrameworkLogo {
+	clear: both;
+	display: block;
+	width: 90px;
+	height: 36px;
+	background: url('../images/gavern-logo.png') no-repeat 0 0;
+	text-indent: -9999em;
+	margin: 12px auto 0 auto;
+	padding: 40px 0 50px 0;
+	opacity: 0.4;
+}
+/* Suffixes */
+
+.box {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0 0 52px 0;
+	padding: 0;
+	width: 100%;
+}
+.gridpage .box {
+	margin: 0 0 14px 0;
+}
+.box:last-child {
+	margin-bottom: 0!important;
+}
+div.content {
+	clear: both;
+}
+.box li {
+	padding: 5px 0 0 12px;
+	position: relative;
+}
+.box .menu li:before,
+.box .custom li:before {
+	content: "\f105";
+	font-family: FontAwesome;
+	left: 0;
+	padding: 0;
+	position: absolute;
+	top: 6px;
+}
+.box li a {
+	line-height: 2.0;
+	text-decoration: none;
+}
+.box a {
+	text-decoration: none;
+}
+.box ul {
+	margin: 0;
+	padding: 0;
+}
+.box ul ul {
+	margin-left: 20px;
+}
+/* default suffix */
+.box .header {
+	color: #333;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 32px;
+	text-transform: uppercase;
+}
+/* greybg suffix - only with the onepage page suffix */
+.onepage .box.greybg {
+	background: #f8f8f8;
+}
+.onepage #gkHeader .box,
+.onepage #gkBottom1 .box,
+.onepage #gkPageContent .box {
+	margin: 0!important;
+	padding: 102px 0!important;
+	width: 100%!important;
+}
+.onepage #gkContent,
+.onepage #gkBottom1 {
+	padding: 0;
+}
+.onepage #gkPageContent {
+	margin-bottom: 0!important;
+}
+.onepage #gkHeader .box.mediumspaces,
+.onepage #gkBottom1 .box.mediumspaces,
+.onepage #gkPageContent .box.mediumspaces {
+	padding: 70px 0!important;
+}
+.onepage .gkCols3,
+.onepage .gkCols4,
+.onepage .gkCols6 {
+	margin: 0!important;
+}
+/* clear suffix */
+
+.box.clear,
+#gkBottom2 .box.clear {
+	margin: 0!important;
+	padding: 0!important;
+}
+.clear div.content {
+	clear: both;
+}
+/* nomargin suffix */
+
+.box.nomargin {
+	margin-left: 0!important;
+	margin-right: 0!important;
+}
+/* advertisement suffix */
+
+#gkSidebar .box.advertisement {
+	border-top: none;
+}
+.box.advertisement .header {
+	background: transparent;
+	border-bottom: 1px solid #e5e5e5;
+	color: #aaa!important;
+	font-family: Arial, Verdana, sans-serif!important;
+	font-size: 11px!important;
+	font-weight: 300;
+	line-height: 16px;
+	margin: 0 0 12px 0;
+	min-height: 21px;
+	padding: 0;
+	text-align: right;
+}
+.box.advertisement .header span {
+	background: transparent;
+	float: right;
+	line-height: 16px;
+	padding: 0;
+}
+/* suffix light */
+.box.light {
+	background: #f8f8f8;
+	padding: 20px!important;
+}
+/* suffix _text */
+
+.box_text > div {
+	background: #fff;
+}
+/* suffix dark */
+.box.dark {
+	background: #333!important;
+	color: #888;
+	padding: 20px!important;
+}
+.box.dark .header {
+	background: transparent!important;
+	line-height: 1.2;
+}
+.box.dark h1,
+.box.dark h2,
+.box.dark h3,
+.box.dark h4,
+.box.dark h5,
+.box.dark h6 {
+	color: #ddd;
+}
+.box.dark a {
+	color: #ddd!important;
+}
+.box.dark a:active,
+.box.dark a:focus,
+.box.dark a:hover {
+	color: #7484ff!important;
+}
+/* suffix color */
+.box.color,
+#gkBottom2 .box {
+	background: #7484ff!important;
+	color: #c9d9ff!important;
+	padding: 20px!important;
+}
+.box.color .header,
+#gkBottom2 .box .header {
+	background: transparent!important;
+	line-height: 1.2;
+}
+.box.color .header small,
+#gkBottom2 .box .header small {
+	color: #fff;
+}
+.box.color h1,
+.box.color h2,
+.box.color h3,
+.box.color h4,
+.box.color h5,
+.box.color h6,
+#gkBottom2 .box h1,
+#gkBottom2 .box h2,
+#gkBottom2 .box h3,
+#gkBottom2 .box h4,
+#gkBottom2 .box h5,
+#gkBottom2 .box h6 {
+	color: #fff;
+}
+.box.color a,
+#gkBottom2 .box a {
+	color: #fff!important;
+}
+.box.color a:active,
+.box.color a:focus,
+.box.color a:hover,
+#gkBottom2 .box a:active,
+#gkBottom2 .box a:focus,
+#gkBottom2 .box a:hover {
+	color: #c9d9ff!important;
+}
+/* suffix colortitle */
+.box.colortitle .header {
+	color: #7484ff;
+}
+/* Suffix nomargin */
+.box.nomargin {
+	margin: 0!important;
+	padding: 0!important;
+}
+/* Suffix bigtitle */
+.box.bigtitle .header {
+	font-size: 60px;
+	font-weight: 300;
+	line-height: 1.6;
+	margin: 0 0 20px 0;
+	text-align: center;
+	text-transform: none;
+}
+.box.bigtitle .header small {
+	clear: both;
+	color: #999;
+	display: block;
+	font-size: 20px;
+	line-height: 1.6;
+	text-align: center;
+	text-transform: uppercase;
+}
+/* Suffix mediumtitle */
+.box.mediumtitle .header {
+	font-size: 36px;
+	font-weight: 500;
+	line-height: 2.0;
+	margin: 0 0 45px 0;
+	text-align: center;
+	text-transform: uppercase;
+}
+.box.mediumtitle .header small {
+	clear: both;
+	color: #999;
+	display: block;
+	font-size: 22px;
+	font-weight: 300;
+	line-height: 2.0;
+	text-align: center;
+	text-transform: none;
+}
+/* tablet/mobile suffixes */
+
+.onlytablet {
+	display: none;
+}
+.onlymobile {
+	display: none;
+}
+/* Login form */
+
+#gkFBLogin {
+	float: left;
+	width: 45%;
+}
+#gkFBLogin p {
+	line-height: 18px;
+	margin: 14px 0 20px;
+}
+#gkFBLogin + #login-form,
+#gkFBLogin + #com-login-form {
+	float: left;
+	width: 45%;
+	margin-left: 4%;
+	padding-left: 30px;
+	border-left: 1px solid #e7e7e7;
+}
+#form-login-remember {
+	margin: 10px 0 30px !important;
+}
+#form-login-remember label {
+	font-size: 13px;
+	font-weight: 400;
+	text-transform: inherit;
+}
+#login-form fieldset p {
+	margin: 0.5em 0;
+}
+#login-form input[type="text"],
+#login-form input[type="password"] {
+	margin: 6px 0 0;
+	width: 99%;
+}
+label#jform_spacer-lbl {
+	font-size: 11px;
+	font-weight: normal;
+	color: #666;
+}
+#form-login-buttons {
+	float: left;
+}
+#form-login-buttons .button {
+	height: 44px;
+	line-height: 44px;
+	padding: 0 22px
+}
+/* Login with Facebook button */
+
+span#fb-auth {
+	background-color: #2F4989;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	color: #fff;
+	cursor: pointer;
+	display: block;
+	float: left;
+	font-size: 13px;
+	height: 43px;
+	line-height: 43px;
+	margin: 0 0 0 6px;
+	padding: 0 20px 0 44px;
+	position: relative;
+	text-decoration: none;
+	text-transform: uppercase;
+	-webkit-transition: background-color 0.2s ease-out;
+	-moz-transition: background-color 0.2s ease-out;
+	-o-transition: background-color 0.2s ease-out;
+	transition: background-color 0.2s ease-out;
+	width: 172px;
+}
+span#fb-auth:before {
+	color: #fff;
+	content: "\f09a";
+	font-family: FontAwesome;
+	font-size: 18px;
+	position: absolute;
+	top: 2px;
+	left: 18px;
+	width: 24px;
+}
+
+#form-login-remind {
+	border-top: 1px solid #e5e5e5;
+	font-size: 14px;
+	margin: 42px 0 0;
+	padding: 16px 0 0
+}
+#form-login-remind a {
+	margin: 0 4px
+}
+/* Popup Login */
+#gkPopupOverlay,
+#gkPopupLogin {
+	display: none;
+	overflow: hidden;
+	position: fixed;
+	z-index: 1000002;
+	left: 50%;
+	top: 100px;
+	background: #fff;
+}
+#gkPopupLogin {
+	margin-left: -220px;
+	position: fixed;
+	width: 426px;
+}
+.gkPopupWrap {
+	padding: 40px;
+	overflow: hidden;
+}
+.gkPopupWrap h3 {
+	font-size: 33px;
+	font-weight: 300;
+	line-height: 42px;
+	margin: 0 0 30px;
+	text-transform: uppercase;
+}
+.gkPopupWrap ul.menu {
+	float: left;
+	margin: 0;
+	width: 70%;
+}
+.gkPopupWrap .logout-button {
+	margin-top: 20px;
+}
+#gkPopupOverlay {
+	background: #000;
+	width: 100%;
+	height: 100%;
+	z-index: 1000001;
+	top: 0;
+	left: 0;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=45)";
+	filter: alpha(opacity=45);
+	opacity: 0.45;
+	margin-left: 0;
+}
+body[data-mobile="true"] #gkMobileMenu select {
+    font-size: 50px;
+}  

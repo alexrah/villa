@@ -1,0 +1,179 @@
+/*
+#------------------------------------------------------------------------
+# Creativity - May Joomla! template (for Joomla 2.5)
+#
+# Copyright (C) 2007-2013 Gavick.com. All Rights Reserved.
+# License: Copyrighted Commercial Software
+# Website: http://www.gavick.com
+# Support: support@gavick.com 
+*/
+ 
+/* Base for all menus */
+#gkMainMenu {
+	float: right;
+	margin-top: 0;
+	padding: 0;
+	width: auto;
+}
+#gkMainMenu .gkMenu {
+	display: block;
+	margin: 0;
+	position: relative;
+}
+.gkMenu > ul > li {
+	clear: none!important;
+	float: left;
+	font-size: 14px;
+	font-weight: 400;
+	height: 74px;
+	line-height: 75px;
+	text-transform: uppercase;
+	width: auto;
+}
+.gkMenu > ul > li > a {
+	color: #333;
+	display: block;
+	height: 74px;
+	line-height: 75px;
+	padding: 0 16px;
+}
+.gkMenu > ul > li a small {
+	display: block;
+	font-size: 11px;
+	line-height: 12px;
+}
+.gkMenu > ul > li > .childcontent,
+.gkMenu > ul > li > .childcontent .childcontent {
+	border: 1px solid #ededed;
+	position: absolute;
+	left: -999em;
+	z-index: 999;
+}
+.gkMenu > ul > li > .childcontent {
+	border-top: none;
+}
+.gkMenu > ul > li > .childcontent .gkcol {
+	float: left;
+}
+.gkMenu > ul > li:hover > .childcontent,
+.gkMenu > ul > li:hover > .childcontent li:hover > .childcontent {
+	left: inherit;
+}
+.gkMenu > ul > li .childcontent {
+	margin-left: 0;
+	margin-top: 0;
+}
+.gkMenu > ul > li .childcontent .childcontent {
+	margin-left: 160px;
+	margin-top: -35px!important;
+	overflow: visible!important;
+}
+
+/* main menu CSS */
+.gkMenu > ul {
+	margin: 0;
+	padding: 0;
+}
+.gkMenu a:hover,
+.gkMenu a:active,
+.gkMenu a:focus,
+.gkMenu li.active > a {
+	color: #7484ff;
+}
+.gkMenu > ul > li > div.childcontent:before {
+	background: transparent url('../../images/menu_arrow.png') no-repeat 0 0;
+	content: "";
+	display: block;
+	height: 10px;
+	left: 26px;
+	position: absolute;
+	top: -10px;
+	width: 14px;
+}
+.gkMenu > ul li div.childcontent {
+	background: #fff;
+	-webkit-box-shadow: 0 0 2px rgba(0, 0, 0, .2);
+	-moz-box-shadow: 0 0 2px rgba(0, 0, 0, .2);
+	box-shadow: 0 0 2px rgba(0, 0, 0, .2);
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin-top: -10px;
+	text-transform: none;
+	overflow: visible!important;
+}
+.gkMenu > ul li div.childcontent-inner {
+	overflow: visible!important;
+	background: #fff;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.gkMenu > ul li > .childcontent .gkcol {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding-bottom: 0;
+}
+.gkMenu > ul li div.childcontent li {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	
+	line-height: 1;
+	margin: 0;
+	padding: 0;
+
+}
+.gkMenu > ul li div.childcontent ul { padding: 20px 0;  }
+
+.gkMenu > ul li div.childcontent a {
+	
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	
+	display: block;
+	font-size: 14px;
+	
+	padding: 10px 25px
+}
+.gkMenu > ul li li div.childcontent small {
+	color: #aaa;
+	font-weight: normal;
+	padding-bottom: 5px;
+}
+.gkMenu > ul li div.childcontent li.group {
+	padding: 0;
+	margin: 0;
+	height: auto;
+	border: none !important;
+	background: none;
+}
+.gkMenu > ul li div.childcontent header {
+	padding: 10px 16px 6px 16px;
+	display: block;
+	color: #fff;
+	margin: 0;
+	font-weight: 400!important;
+}
+.gkMenu > ul li div.childcontent header a {
+	font-size: 16px;
+	line-height: 24px;
+	padding: 8px 0 4px;
+	text-transform: uppercase;
+	border-bottom: 2px solid #e5e5e5;
+}
+.gkMenu > ul li div.childcontent header small {
+	display: block;
+	text-transform: none;
+}
+.gkMenu li .module p {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+/* hide mobile menu */
+#gkMobileMenu {
+	display: none;
+}

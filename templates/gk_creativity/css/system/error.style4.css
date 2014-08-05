@@ -1,0 +1,165 @@
+/*
+#------------------------------------------------------------------------
+# Creativity - May Joomla! template (for Joomla 2.5)
+#
+# Copyright (C) 2007-2013 Gavick.com. All Rights Reserved.
+# License: Copyrighted Commercial Software
+# Website: http://www.gavick.com
+# Support: support@gavick.com 
+*/
+
+/* Basic elements */
+html {
+	height: 100%;
+}
+body, html {
+	margin: 0;
+	min-height: 100%;
+	padding: 0;
+}
+body {
+	background: #ff7f66;
+	color: #fff;
+	font-family: 'Open Sans', Arial, sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 2;
+	min-height: 100%;
+	padding: 0;
+	text-align: center;
+	word-wrap: break-word;
+}
+a {
+	-webkit-transition: background .3s cubic-bezier(.17, .67, .88, 1.25), color .2s linear;
+	-moz-transition: background .3s cubic-bezier(.17, .67, .88, 1.25), color .2s linear;
+	-o-transition: background .3s cubic-bezier(.17, .67, .88, 1.25), color .2s linear;
+	transition: background .3s cubic-bezier(.17, .67, .88, 1.25), color .2s linear;
+	color: #fff;
+	text-decoration: none;
+}
+a:hover, 
+a:active, 
+a:focus {
+	color:#fec3b8;
+}
+/* Logo  */
+#gkLogo {
+	-webkit-transition: background-color .3s linear;
+	-moz-transition: background-color .3s linear;
+	-ms-transition: background-color .3s linear;
+	-o-transition: background-color .3s linear;
+	transition: background-color .3s linear;
+	display: block;
+	padding: 0;
+	text-indent: -999em;
+	text-shadow: none;
+}
+#gkLogo img {
+	display: block;
+	margin: 0;
+}
+#gkLogo.cssLogo {
+	height: 74px;
+	width: 130px;
+}
+#gkLogo.text {
+	display: block;
+	font-family: Arial, sans-serif;
+	font-size: 36px;
+	font-weight: bold;
+	line-height: 1;
+	height: auto;
+	margin: 0;
+	overflow: hidden;
+	padding: 15px 5px;
+	text-indent: 0;
+	text-transform: uppercase;
+	width: auto;
+}
+#gkLogo.text .gkLogoSlogan {
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 20px;
+	text-align: center;
+}
+/* Blocks */
+
+#wrapper {
+	padding: 100px;
+}
+/* Other elements */
+h1 {
+	font-size: 260px;
+	font-weight: 700;
+	letter-spacing: -8px;
+	line-height: 1.2;
+	margin: 0;
+}
+h2, 
+h3 {
+	font-size: 60px;
+	font-weight: 300;
+	line-height: 1;
+	margin: 36px 0 0;
+	text-transform: uppercase;
+}
+h3 {
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 1.2;
+	margin: 18px 0 60px;
+}
+
+@media (max-width: 920px) {
+	#wrapper {
+		padding: 60px;
+	}
+	#gkPage {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		max-width: 100%;
+		padding: 20px;
+	}
+	#wrapper > div, 
+	#wrapper > div + div, 
+	#wrapper > div + div + div {
+		clear: both;
+		float: none;
+		width: 100%;
+	}
+	h1 {
+		font-size: 160px;
+		letter-spacing: -3px;
+		margin: -20px 0 10px 0;
+		text-align: center;
+	}
+	h2 {
+		font-size: 32px;
+	}
+	h3 {
+		font-size: 22px;
+	}
+}
+
+@media (max-width: 600px) {
+	#wrapper {
+		padding: 20px;
+	}
+	#gkPage {
+		margin: 12px 0!important;
+	}
+	h1 {
+		font-size: 80px;
+		letter-spacing: 0;
+		margin: -20px 0 10px 0;
+		text-align: center;
+	}
+	h2 {
+		font-size: 26px;
+	}
+	h3 {
+		font-size: 18px;
+	}
+}
