@@ -102,21 +102,26 @@
 .gkIsWrapper-gk_creativity .figcaption h1,
 .gkIsWrapper-gk_creativity .figcaption h2 {
 	color: #fff;
+	/* color: #FF8500; */
 	text-align: center;
-	text-transform: uppercase;
+	/* text-transform: uppercase; */
 	position: relative;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
 }
 
 .gkIsWrapper-gk_creativity .figcaption h1 i,
 .gkIsWrapper-gk_creativity .figcaption h2 i {
-	color: #fff;
+	/* color: #fff; */
 }
 
 .gkIsWrapper-gk_creativity .figcaption h1 {
-	font-size: 60px;
-	font-weight: 300;
+	/* font-size: 60px; */
+	font-size: 4em;
+	/* font-weight: 300; */
+	font-weight: 600;
 	line-height: 1.0;
-	margin: 64px auto 0 auto;
+	/* margin: 64px auto 0 auto; */
+	margin: -10% auto 0 auto;
 	max-width: 920px;
 }
 
@@ -130,7 +135,7 @@
 
 .gkIsWrapper-gk_creativity .figcaption > a {
 	background: transparent;
-	border: 2px solid #fff;
+	border: 2px solid #ff8500;
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
 	border-radius: 2px;
@@ -139,6 +144,7 @@
 	box-sizing: border-box;
 	bottom: -10%;
 	color: #fff;
+	color: #ff8500;
 	display: inline-block;
 	font-size: 15px;
 	font-weight: 600;
@@ -623,3 +629,4 @@
 	49%, 51%, 53%, 55%, 57% { transform: translateX(-10px); }
 	50%, 52%, 54%, 56%, 58%  { transform: translateX(10px); }
 }
+

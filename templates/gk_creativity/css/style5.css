@@ -201,3 +201,7 @@ table.calendar tr td.calendarTodayLinked a {
 .gkIsWrapper-gk_creativity .figcaption > a:hover {
 	color: #fa9556!important;
 }
+
+.gkIsWrapperFixed .figcaption > h1 {
+  color: #FF8500;
+}

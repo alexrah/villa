@@ -185,6 +185,7 @@ div.gk-intro {
 #gkLogo img {
 	display: block;
 	margin: 0;
+  width: 100%;
 }
 #gkLogo.cssLogo {
 	background: transparent url('../images/logo.png') no-repeat 0 0;
@@ -222,7 +223,9 @@ div.gk-intro {
 /* Top */
 #gkTop {
 	background: #fff;
-	border-bottom: 1px solid #eee;
+  
+	border-bottom: 3px solid #eee;
+	border-top: 3px solid #fff;
 	min-height: 75px;
 	position: fixed;
 	top: 0;
