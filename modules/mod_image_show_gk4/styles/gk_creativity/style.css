@@ -101,6 +101,8 @@
 
 .gkIsWrapper-gk_creativity .figcaption h1,
 .gkIsWrapper-gk_creativity .figcaption h2 {
+  font-family: "Baskerville";
+  font-style: italic;
 	color: #fff;
 	/* color: #FF8500; */
 	text-align: center;
