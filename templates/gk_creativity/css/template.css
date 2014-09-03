@@ -163,7 +163,7 @@ div.gk-intro {
 	-ms-box-sizing: border-box;
 	-o-box-sizing: border-box;
 	box-sizing: border-box;
-	margin: 0 auto!important;
+	margin: 0px auto;
 	padding: 0;
 }
 #gkHeader {
@@ -207,7 +207,7 @@ div.gk-intro {
 	padding: 0;
 	text-indent: -999em;
 	text-shadow: none;
-	width: 130px;
+	width: 80px;
 	display: block;
 	float: left;
 	-webkit-transition: background-color .3s linear;
@@ -256,11 +256,13 @@ div.gk-intro {
 }
 /* Top */
 #gkTop {
-	background: #fff;
+	background: rgba(255,255,255,0.9);
   
-	border-bottom: 3px solid #eee;
-	border-top: 3px solid #fff;
-	min-height: 75px;
+	/* border-bottom: 3px solid #eee; */
+	/* border-top: 3px solid #fff; */
+	/* margin: 3px auto; */
+	padding: 4px;
+	height: 55px;
 	position: fixed;
 	top: 0;
 	-webkit-transition: all .3s ease-out;
@@ -359,7 +361,9 @@ div.gk-intro {
 #gkBreadcrumb {
 	border-bottom: 1px solid #eee;
 	overflow: hidden;
-	padding: 36px 0
+	/* padding: 36px 0
+ */
+	height: 30px;
 }
 #gkBreadcrumb .breadcrumbs {
 	float: left;
@@ -368,16 +372,17 @@ div.gk-intro {
 	color: #ccc;
 	font-size: 16px;
 	font-weight: 300;
-	padding: 13px 10px!important;
+	padding: 0px 10px!important;
 }
 .breadcrumbs > ul > li {
 	color: #fff;
 	float: left;
-	font-size: 28px;
+	font-size: 15px;
 	font-weight: 300;
 }
 .breadcrumbs > ul > li a {
 	color: #fff
+;
 }
 .breadcrumbs > ul > li a:hover {
 	color: #7484FF
@@ -505,7 +510,7 @@ div.content {
 .onepage #gkBottom1 .box,
 .onepage #gkPageContent .box {
 	margin: 0!important;
-	padding: 102px 0!important;
+	padding: 30px 0!important;
 	width: 100%!important;
 }
 .onepage #gkContent,
@@ -518,7 +523,7 @@ div.content {
 .onepage #gkHeader .box.mediumspaces,
 .onepage #gkBottom1 .box.mediumspaces,
 .onepage #gkPageContent .box.mediumspaces {
-	padding: 70px 0!important;
+	padding: 30px 0!important;
 }
 .onepage .gkCols3,
 .onepage .gkCols4,
@@ -657,7 +662,7 @@ div.content {
 	font-size: 60px;
 	font-weight: 300;
 	line-height: 1.6;
-	margin: 0 0 20px 0;
+	margin: 10px auto;
 	text-align: center;
 	text-transform: none;
 }
@@ -842,4 +847,8 @@ body[data-mobile="true"] #gkMobileMenu select {
 
 .hidden {
   display: none;
+}
+
+.bigtitle .header, h1, h2, h3, h4, h5, h6, .gkMenu ul li, .box.menu, .gkTabsWrap ol li {
+font-family: 'Baskerville';
 }

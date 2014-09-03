@@ -25,16 +25,16 @@
 	float: left;
 	font-size: 14px;
 	font-weight: 400;
-	height: 74px;
-	line-height: 75px;
-	text-transform: uppercase;
+	height: 55px;
+	line-height: 55px;
+	text-transform: lowercase;
 	width: auto;
 }
 .gkMenu > ul > li > a {
 	color: #333;
 	display: block;
-	height: 74px;
-	line-height: 75px;
+	height: 55px;
+	line-height: 55px;
 	padding: 0 16px;
 }
 .gkMenu > ul > li a small {

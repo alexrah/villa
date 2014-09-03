@@ -70,6 +70,8 @@ ol.gkDecimalLeadingZero {
 ul.gkBullet1,  ul.gkBullet2,  ul.gkBullet3,  ul.gkBullet4,  #k2Container .itemFullText ul,  #k2Container .itemIntroText ul {
 	margin: 2em 0;
 	padding: 0
+;
+	text-align: center;
 }
 ul li {
 	list-style-position: outside
@@ -504,4 +506,9 @@ h5.page-header {
 .gkPriceTable dl.gkPremium dd,
 .gkPriceTable dl.gkPremium dd.gkPrice small {
 	color: #fff;
+}
+
+
+.bigtitle .header, h1, h2, h3, h4, h5, h6, .gkMenu ul li, .box.menu, .gkTabsWrap ol li {
+font-family: 'Baskerville';
 }
