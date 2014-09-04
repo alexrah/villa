@@ -80,10 +80,7 @@ $k2ContainerClasses = (($this->item->featured) ? ' itemIsFeatured' : '') . ($par
 					<?php if($params->get('itemVideoAnchor') && !empty($this->item->video)): ?>
 					<li class="itemVideo"> <a class="k2Anchor" href="<?php echo $this->item->link; ?>#itemVideoAnchor"><?php echo JText::_('K2_MEDIA'); ?></a> </li>
 					<?php endif; ?>
-					<?php if($params->get('itemImageGalleryAnchor') && !empty($this->item->gallery)): ?>
-					<li class="itemGallery"> <a class="k2Anchor" href="<?php echo $this->item->link; ?>#itemImageGalleryAnchor"><?php echo JText::_('K2_IMAGE_GALLERY'); ?></a> </li>
-					<?php endif; ?>
-					
+								
 					<?php if($params->get('itemCommentsAnchor') && $params->get('itemComments') && ( ($params->get('comments') == '2' && !$this->user->guest) || ($params->get('comments') == '1')) ): ?>
 					<li>
 								<?php if(!empty($this->item->event->K2CommentsCounter)): ?>
@@ -118,6 +115,13 @@ $k2ContainerClasses = (($this->item->featured) ? ' itemIsFeatured' : '') . ($par
 			
 			<div class="itemBody">
 						<?php echo $this->item->event->BeforeDisplayContent; ?> <?php echo $this->item->event->K2BeforeDisplayContent; ?>
+						<?php if($params->get('itemImageGallery') && !empty($this->item->gallery)): ?>
+						<div class="itemImageGallery" id="itemImageGalleryAnchor">
+									<?php echo $this->item->gallery; ?>
+						</div>
+						<?php endif; ?>
+
+
 						<?php if(!empty($this->item->fulltext)): ?>
 						<?php if($params->get('itemIntroText')): ?>
 						<div class="itemIntroText">
@@ -325,12 +329,6 @@ $k2ContainerClasses = (($this->item->featured) ? ' itemIsFeatured' : '') . ($par
 									<?php if($params->get('itemVideoCredits') && !empty($this->item->video_credits)): ?>
 									<span class="itemVideoCredits"><?php echo $this->item->video_credits; ?></span>
 									<?php endif; ?>
-						</div>
-						<?php endif; ?>
-						<?php if($params->get('itemImageGallery') && !empty($this->item->gallery)): ?>
-						<div class="itemImageGallery" id="itemImageGalleryAnchor">
-									<h3><?php echo JText::_('K2_IMAGE_GALLERY'); ?></h3>
-									<?php echo $this->item->gallery; ?>
 						</div>
 						<?php endif; ?>
 						<?php if($params->get('itemNavigation') && !JRequest::getCmd('print') && (isset($this->item->nextLink) || isset($this->item->previousLink))): ?>

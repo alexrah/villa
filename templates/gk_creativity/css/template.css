@@ -509,14 +509,20 @@ div.content {
 .onepage #gkHeader .box,
 .onepage #gkBottom1 .box,
 .onepage #gkPageContent .box {
-	margin: 0!important;
-	padding: 30px 0!important;
+	/* margin: 0!important; */
+	/* padding: 30px 0!important; */
+	padding: 31px 0 0;
 	width: 100%!important;
+  margin: -18px 0 0;
 }
 .onepage #gkContent,
-.onepage #gkBottom1 {
+{
 	padding: 0;
 }
+.onepage #gkBottom1 {
+	padding: 13px 0 0;
+}
+
 .onepage #gkPageContent {
 	margin-bottom: 0!important;
 }

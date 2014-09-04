@@ -177,3 +177,17 @@
 #gkMobileMenu {
 	display: none;
 }
+
+#menu263 {
+  background-color: rgba(250,149,86,0.5);
+  text-transform: uppercase;
+  font-family: 'Open sans';
+  font-weight: bold;
+  height: 35px;
+  line-height: 35px;
+  margin-top: 10px;
+}
+
+#menu263:hover, .active #menu263 {
+  color: white;
+}

@@ -74,7 +74,9 @@ ul li.itemResizer #fontIncrease {
 	color: #666 !important
 }
 .itemImageBlock {
-	margin: 0 0 40px;
+  /* display: none; */
+	/* margin: 0 0 40px; */
+	margin: 0 0 0;
 	overflow: hidden;
 	position: relative;
 }
@@ -83,6 +85,10 @@ ul li.itemResizer #fontIncrease {
 	line-height: 0;
 	overflow: hidden;
 }
+.itemImage.modal {
+  display: none;
+}
+
 .itemImageBlock img {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -456,7 +462,8 @@ a.commentLink {
 }
 .userView article, .genericView article, .itemList article {
 	clear: both;
-	margin-top: 38px !important;
+	/* margin-top: 38px !important; */
+	margin-top: 0px !important;
 }
 /*.itemListSubCategories h2*/
 .subCategoryContainer {
@@ -470,7 +477,8 @@ a.commentLink {
 	float: left;
 }
 .itemList article {
-	padding-top: 48px;
+	/* padding-top: 48px; */
+	padding-top: 0px;
 }
 .itemsContainer:first-child .itemList article, .itemsContainer .itemsContainerWrap .itemList article, #itemListLeading .itemContainer:first-child article.itemView, .genericView .itemList article:first-child {
 	border: none;
@@ -913,3 +921,8 @@ article header .itemRatingBlock > div {
 	clear: both;
 }
 div.itemSocialSharing { overflow: visible!important }
+
+.itemCategory, .itemComments, .itemHitsBlock, .itemsContainerWrap .itemView header ul li.itemDate {
+  display: none;
+}
+

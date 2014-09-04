@@ -368,7 +368,8 @@ img.nspImage.gkResponsive {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	overflow: hidden;
-	padding: 72px 0 0 0;
+	/* padding: 72px 0 0 0; */
+	padding: 0 0 0 0;
 	position: relative;
 	text-align: center;
 }
@@ -384,7 +385,8 @@ img.nspImage.gkResponsive {
 	box-sizing: border-box;
 	margin: 0 -1%;
 	overflow: hidden;
-	padding: 0 0 70px 0;
+	/* padding: 0 0 70px 0; */
+	padding: 0 0 0 0;
 	width: 102%;
 }
 
@@ -780,7 +782,9 @@ img.nspImage.gkResponsive {
 	font-style: italic;
 	line-height: 38px;
 	margin: 0;
-	padding: 30px 0;
+	/* padding: 30px 0; */
+	padding: 0 0;
+  margin: 0 0 -30px;
 	text-align: center;
 }
 
