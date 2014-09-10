@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension
+	type="module"
+	version="3.0"
+	client="site"
+	method="upgrade">
+	<name>mod_sr_checkavailability</name>
+	<creationDate>Aug 2014</creationDate>
+	<author>Solidres</author>
+	<authorEmail>contact@solidres.com</authorEmail>
+	<authorUrl>http://www.solidres.com</authorUrl>
+	<copyright>(C) 2013 - 2014 Solidres. All right reserved</copyright>
+	<license>GNU General Public License version 3, or later</license>
+	<version>0.7.1</version>
+	<description>MOD_SR_CHECKAVAILABILITY_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_sr_checkavailability">mod_sr_checkavailability.php</filename>
+		<filename>helper.php</filename>
+		<filename>mod_sr_checkavailability.xml</filename>
+		<folder>tmpl</folder>
+		<folder>language</folder>
+	</files>
+	<languages>
+		<language tag="el-GR">language/el-GR/el-GR.mod_sr_checkavailability.ini</language>
+		<language tag="el-GR">language/el-GR/el-GR.mod_sr_checkavailability.sys.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_sr_checkavailability.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_sr_checkavailability.sys.ini</language>
+		<language tag="it-IT">language/it-IT/it-IT.mod_sr_checkavailability.ini</language>
+		<language tag="it-IT">language/it-IT/it-IT.mod_sr_checkavailability.sys.ini</language>
+		<language tag="pt-BR">language/pt-BR/pt-BR.mod_sr_checkavailability.ini</language>
+		<language tag="pt-BR">language/pt-BR/pt-BR.mod_sr_checkavailability.sys.ini</language>
+		<language tag="ru-RU">language/ru-RU/ru-RU.mod_sr_checkavailability.ini</language>
+		<language tag="ru-RU">language/ru-RU/ru-RU.mod_sr_checkavailability.sys.ini</language>
+	</languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+            </fieldset>
+
+            <fieldset name="advanced">
+                <field
+                    name="layout"
+                    type="modulelayout"
+                    label="JFIELD_ALT_LAYOUT_LABEL"
+                    description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+                <field
+                    name="moduleclass_sfx"
+                    type="textarea" rows="3"
+                    label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                    description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+                <field
+                    name="cache"
+                    type="list"
+                    default="0"
+                    label="COM_MODULES_FIELD_CACHING_LABEL"
+                    description="COM_MODULES_FIELD_CACHING_DESC">
+                    <option
+                            value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+
+                <field
+                    name="target_itemid"
+                    type="text"
+                    label="SR_MOD_CHECKAVAILABILITY_FIELD_TARGET_ITEMID_LABEL"
+                    description="SR_MOD_CHECKAVAILABILITY_FIELD_TARGET_ITEMID_DESC" />
+            </fieldset>
+        </fields>
+    </config>
+</extension>

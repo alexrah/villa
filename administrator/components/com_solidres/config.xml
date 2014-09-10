@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<fieldset name="component">
+        <field
+            name="default_gallery"
+            type="gallerylist"
+            addfieldpath="/administrator/components/com_solidres/models/fields"
+            default="simple_gallery"
+            label="SR_FIELD_DEFAULT_GALLERY"
+            description="SR_FIELD_DEFAULT_GALLERY_DESC" />
+
+		<field
+				name="date_format"
+				type="list"
+				default="d-m-Y"
+				label="SR_FIELD_DATE_FORMAT_LABEL"
+				description="SR_FIELD_DATE_FORMAT_DESC">
+			<option
+					value="d-m-Y">SR_DATE_FORMAT_0</option>
+            <option
+					value="d/m/Y">SR_DATE_FORMAT_1</option>
+			<option
+					value="d M Y">SR_DATE_FORMAT_2</option>
+			<option
+					value="d F Y">SR_DATE_FORMAT_3</option>
+			<option
+					value="D, d M Y">SR_DATE_FORMAT_4</option>
+			<option
+					value="l, d F Y">SR_DATE_FORMAT_5</option>
+			<option
+					value="Y-m-d">SR_DATE_FORMAT_6</option>
+			<option
+					value="m-d-Y">SR_DATE_FORMAT_7</option>
+			<option
+					value="m/d/Y">SR_DATE_FORMAT_8</option>
+			<option
+					value="M d, Y">SR_DATE_FORMAT_9</option>
+			<option
+					value="F d, Y">SR_DATE_FORMAT_10</option>
+			<option
+					value="D, M d, Y">SR_DATE_FORMAT_11</option>
+			<option
+					value="l, F d, Y">SR_DATE_FORMAT_12</option>
+		</field>
+
+        <field
+            name="availability_calendar_enable"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="SR_FIELD_AVAILABILITY_CALENDAR_ENABLE_LABEL"
+            description="SR_FIELD_AVAILABILITY_CALENDAR_ENABLE_DESC">
+            <option
+                    value="0">JNO</option>
+            <option
+                    value="1">JYES</option>
+        </field>
+
+        <field
+            name="availability_calendar_month_number"
+            type="text"
+            size="50"
+            default="6"
+            label="SR_FIELD_AVAILABILITY_CALENDAR_MONTH_NUMBER_LABEL"
+            description="SR_FIELD_AVAILABILITY_CALENDAR_MONTH_NUMBER_DESC" />
+
+		<field
+			name="datepicker_month_number"
+			type="text"
+			size="50"
+			default="3"
+			label="SR_FIELD_DATEPICKER_MONTH_NUMBER_LABEL"
+			description="SR_FIELD_DATEPICKER_MONTH_NUMBER_DESC" />
+
+        <field
+            name="min_days_book_in_advance"
+            type="text"
+            size="50"
+            default="0"
+            label="SR_FIELD_MIN_DAYS_BOOK_IN_ADVANCE_LABEL"
+            description="SR_FIELD_MIN_DAYS_BOOK_IN_ADVANCE_DESC" />
+
+        <field
+            name="max_days_book_in_advance"
+            type="text"
+            size="50"
+            default="0"
+            label="SR_FIELD_MAX_DAYS_BOOK_IN_ADVANCE_LABEL"
+            description="SR_FIELD_MAX_DAYS_BOOK_IN_ADVANCE_DESC" />
+
+        <field
+            name="min_length_of_stay"
+            type="text"
+            size="50"
+            default="1"
+            label="SR_FIELD_MIN_LENGTH_OF_STAY_LABEL"
+            description="SR_FIELD_MIN_LENGTH_OF_STAY_DESC" />
+
+        <field
+            name="child_max_age_limit"
+            type="text"
+            size="50"
+            default="17"
+            label="SR_FIELD_CHILD_MAX_AGE_LIMIT_LABEL"
+            description="SR_FIELD_CHILD_MAX_AGE_LIMIT_DESC" />
+
+        <field
+            name="show_solidres_copyright"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="SR_FIELD_SHOW_SOLIDRES_POWERED_BY_LABEL"
+            description="SR_FIELD_SHOW_SOLIDRES_POWERED_BY_DESC">
+            <option
+                    value="0">JNO</option>
+            <option
+                    value="1">JYES</option>
+        </field>
+
+        <field
+            name="email_format"
+            type="radio"
+            class="btn-group"
+            default="text/html"
+            label="SR_FIELD_EMAIL_FORMAT_LABEL"
+            description="SR_FIELD_EMAIL_FORMAT_DESC">
+            <option
+                    value="text/plain">Plain</option>
+            <option
+                    value="text/html">Html</option>
+        </field>
+
+
+		<field
+			name="show_price_with_tax"
+			type="radio"
+			class="btn-group"
+			default="0"
+			label="SR_FIELD_SHOW_PRICE_WITH_TAX_LABEL"
+			description="SR_FIELD_SHOW_PRICE_WITH_TAX_DESC">
+            <option
+					value="0">JNO</option>
+            <option
+					value="1">JYES</option>
+        </field>
+
+		<field
+			name="week_start_day"
+			type="list"
+			default="1"
+			label="SR_FIELD_WEEK_START_DAY_LABEL"
+			description="SR_FIELD_WEEK_START_DAY_DESC">
+            <option
+					value="0">SUN</option>
+            <option
+					value="1">MON</option>
+        </field>
+
+	</fieldset>
+	<fieldset
+			name="currency"
+			addfieldpath="/administrator/components/com_solidres/models/fields"
+			label="SR_CONFIG_CURRENCY_LABEL"
+			description="SR_CONFIG_CURRENCY_DESC"
+			>
+	
+			<field
+				name="default_currency_id"
+				type="currency"
+				label="SR_CONFIG_CURRENCY_LABEL"
+				class="inputbox"
+				filter="" />
+
+            <field name="currency_format_pattern" type="list" label="SR_FIELD_DEFAULT_CURRENCY_FORMAT_PATTERN"
+                   description="SR_FIELD_DEFAULT_CURRENCY_FORMAT_PATTERN_DESC"
+                   filter="intval" size="1" default="1" labelclass="control-label">
+                <option value="1">SR_CURRENCY_FORMAT_PATTERN_1</option>
+                <option value="2">SR_CURRENCY_FORMAT_PATTERN_2</option>
+                <option value="3">SR_CURRENCY_FORMAT_PATTERN_3</option>
+                <option value="4">SR_CURRENCY_FORMAT_PATTERN_4</option>
+                <option value="5">SR_CURRENCY_FORMAT_PATTERN_5</option>
+				<option value="6">SR_CURRENCY_FORMAT_PATTERN_6</option>
+                <option value="7">SR_CURRENCY_FORMAT_PATTERN_7</option>
+                <option value="8">SR_CURRENCY_FORMAT_PATTERN_8</option>
+                <option value="9">SR_CURRENCY_FORMAT_PATTERN_9</option>
+                <option value="10">SR_CURRENCY_FORMAT_PATTERN_10</option>
+			</field>
+
+            <field
+                name="number_decimal_points"
+                type="text"
+                label="SR_CONFIG_CURRENCY_NUMBER_DECIMAL_POINTS"
+                description="SR_CONFIG_CURRENCY_NUMBER_DECIMAL_POINTS_DESC"
+                class="inputbox"
+                filter="intval"
+                default="2"
+                />
+
+			<field
+					name="currency_code_symbol"
+					type="radio"
+					class="btn-group"
+					default="code"
+					label="SR_CURRENCY_SHOW_CODE_OR_SYMBOL_LABEL"
+					description="SR_CURRENCY_SHOW_CODE_OR_SYMBOL_DESC">
+				<option
+						value="code">SR_CURRENCY_CODE</option>
+				<option
+						value="sign">SR_CURRENCY_SYMBOL</option>
+			</field>
+		</fieldset>
+	<fieldset
+		name="permissions"
+		label="JCONFIG_PERMISSIONS_LABEL"
+		description="JCONFIG_PERMISSIONS_DESC"
+		>
+
+		<field
+			name="rules"
+			type="rules"
+			label="JCONFIG_PERMISSIONS_LABEL"
+			filter="rules"
+			component="com_solidres"
+			section="component">
+			
+		</field>
+	</fieldset>
+    <fieldset
+			name="Invoice"
+			label="PLG_SOLIDRES_INVOICE_TAB_LABEL"
+			description="PLG_SOLIDRES_INVOICE_TAB_DESC"
+			>
+        <field
+				name="enable_pdf_attachment"
+				type="radio"
+				class="btn-group"
+				default="1"
+				label="PLG_SOLIDRES_INVOICE_PDF_ATTACHMENT_LABEL"
+				description="PLG_SOLIDRES_INVOICE_PDF_ATTACHMENT_DESC">
+            <option
+					value="0">JNO</option>
+            <option
+					value="1">JYES</option>
+        </field>
+
+        <field name="solidres_invoice_number_prefix" type="text"
+			   default="INV"
+			   description="PLG_SOLIDRES_INVOICE_NUMBER_PREFIX_DESC"
+			   label="PLG_SOLIDRES_INVOICE_NUMBER_PREFIX_LABEL"
+			   size="5"
+				/>
+        <field name="solidres_invoice_number_prefix_override" type="text"
+			   default=""
+			   description="PLG_SOLIDRES_INVOICE_NUMBER_PREFIX_OVERRIDE_DESC"
+			   label="PLG_SOLIDRES_INVOICE_NUMBER_PREFIX_OVERRIDE_LABEL"
+			   size="5"
+				/>
+        <field name="solidres_invoice_number_digit" type="text"
+			   default="00"
+			   description="PLG_SOLIDRES_INVOICE_NUMBER_DIGIT_DESC"
+			   label="PLG_SOLIDRES_INVOICE_NUMBER_DIGIT_LABEL"
+			   size="5"
+				/>
+        <field name="solidres_invoice_number_start" type="text"
+			   default="1"
+			   description="PLG_SOLIDRES_INVOICE_NUMBER_START_DESC"
+			   label="PLG_SOLIDRES_INVOICE_NUMBER_START_LABEL"
+			   size="5"
+				/>
+        <field name="solidres_invoice_number_override" type="text"
+			   default=""
+			   description="PLG_SOLIDRES_INVOICE_NUMBER_OVERRIDE_DESC"
+			   label="PLG_SOLIDRES_INVOICE_NUMBER_OVERRIDE_LABEL"
+			   size="5"
+				/>
+        <field name="solidres_invoice_logo_image_path" type="text"
+			   default=""
+			   description="PLG_SOLIDRES_INVOICE_LOGO_IMAGE_PATH_DESC"
+			   label="PLG_SOLIDRES_INVOICE_LOGO_IMAGE_PATH_LABEL"
+			   size="5"
+				/>
+        <field type="spacer" name="myspacer"  label="PDF&lt;hr/&gt;" />
+        <field name="solidres_invoice_pdf_title" type="text"
+			   default="invoice"
+			   description="PLG_SOLIDRES_INVOICE_PDF_TITLE_DESC"
+			   label="PLG_SOLIDRES_INVOICE_PDF_TITLE_LABEL"
+			   size="5"/>
+        <field name="solidres_invoice_pdf_subject" type="text"
+			   default="invoice"
+			   description="PLG_SOLIDRES_INVOICE_PDF_SUBJECT_DESC"
+			   label="PLG_SOLIDRES_INVOICE_PDF_SUBJECT_LABEL"
+			   size="5"/>
+        <field name="solidres_invoice_page_format" type="text"
+			   default="A4"
+			   description="PLG_SOLIDRES_INVOICE_PAGE_FORMAT_DESC"
+			   label="PLG_SOLIDRES_INVOICE_PAGE_FORMAT_LABEL"
+			   size="5"
+				/>
+        <field name="solidres_invoice_pdf_page_orientation" type="text"
+			   default="P"
+			   description="PLG_SOLIDRES_INVOICE_PDF_PAGE_ORIENTATION_DESC"
+			   label="PLG_SOLIDRES_INVOICE_PDF_PAGE_ORIENTATION_LABEL"
+			   size="5"/>
+        <field name="solidres_invoice_pdf_creator" type="text"
+			   default="hotel"
+			   description="PLG_SOLIDRES_INVOICE_PDF_CREATOR_DESC"
+			   label="PLG_SOLIDRES_INVOICE_PDF_CREATOR_LABEL"
+			   size="5"/>
+        <field name="solidres_invoice_pdf_author" type="text"
+			   default="hotel"
+			   description="PLG_SOLIDRES_INVOICE_PDF_AUTHOR_DESC"
+			   label="PLG_SOLIDRES_INVOICE_PDF_AUTHOR_LABEL"
+			   size="5"/>
+        <field name="solidres_invoice_pdf_unit" type="text"
+			   default="mm"
+			   description="PLG_SOLIDRES_INVOICE_PDF_UNIT_DESC"
+			   label="PLG_SOLIDRES_INVOICE_PDF_UNIT_LABEL"
+			   size="5"/>
+        <field name="solidres_invoice_pdf_margin_header" type="text"
+			   default="5"
+			   description="PLG_SOLIDRES_INVOICE_PDF_MARGIN_HEADER_DESC"
+			   label="PLG_SOLIDRES_INVOICE_PDF_MARGIN_HEADER_LABEL"
+			   size="5"/>
+        <field name="solidres_invoice_pdf_margin_footer" type="text"
+			   default="false"
+			   description="PLG_SOLIDRES_INVOICE_PDF_MARGIN_FOOTER_DESC"
+			   label="PLG_SOLIDRES_INVOICE_PDF_MARGIN_FOOTER_LABEL"
+			   size="5"/>
+        <field name="solidres_invoice_pdf_margin_top" type="text"
+			   default="27"
+			   description="PLG_SOLIDRES_INVOICE_PDF_MARGIN_TOP_DESC"
+			   label="PLG_SOLIDRES_INVOICE_PDF_MARGIN_TOP_LABEL"
+			   size="5"/>
+        <field name="solidres_invoice_pdf_margin_bottom" type="text"
+			   default="25"
+			   description="PLG_SOLIDRES_INVOICE_PDF_MARGIN_BOTTOM_DESC"
+			   label="PLG_SOLIDRES_INVOICE_PDF_MARGIN_BOTTOM_LABEL"
+			   size="5"/>
+        <field name="solidres_invoice_pdf_margin_left" type="text"
+			   default="15"
+			   description="PLG_SOLIDRES_INVOICE_PDF_MARGIN_LEFT_DESC"
+			   label="PLG_SOLIDRES_INVOICE_PDF_MARGIN_LEFT_LABEL"
+			   size="5"/>
+        <field name="solidres_invoice_pdf_margin_right" type="text"
+			   default="15"
+			   description="PLG_SOLIDRES_INVOICE_PDF_MARGIN_RIGHT_DESC"
+			   label="PLG_SOLIDRES_INVOICE_PDF_MARGIN_RIGHT_LABEL"
+			   size="5"/>
+        <field name="solidres_invoice_pdf_font_name_main" type="text"
+			   default="courier"
+			   description="PLG_SOLIDRES_INVOICE_PDF_FONT_NAME_MAIN_DESC"
+			   label="PLG_SOLIDRES_INVOICE_PDF_FONT_NAME_MAIN_LABEL"
+			   size="5"/>
+        <field name="solidres_invoice_pdf_font_size_main" type="text"
+			   default="8"
+			   description="PLG_SOLIDRES_INVOICE_PDF_FONT_SIZE_MAIN_DESC"
+			   label="PLG_SOLIDRES_INVOICE_PDF_FONT_SIZE_MAIN_LABEL"
+			   size="5"/>
+        <field name="solidres_invoice_pdf_font_name_footer" type="text"
+			   default="false"
+			   description="PLG_SOLIDRES_INVOICE_PDF_FONT_NAME_FOOTER_DESC"
+			   label="PLG_SOLIDRES_INVOICE_PDF_FONT_NAME_FOOTER_LABEL"
+			   size="5"/>
+        <field name="solidres_invoice_pdf_font_size_footer" type="text"
+			   default="false"
+			   description="PLG_SOLIDRES_INVOICE_PDF_FONT_SIZE_FOOTER_DESC"
+			   label="PLG_SOLIDRES_INVOICE_PDF_FONT_SIZE_FOOTER_LABEL"
+			   size="5"/>
+        <field name="solidres_invoice_pdf_font_monospaced" type="text"
+			   default="courier"
+			   description="PLG_SOLIDRES_INVOICE_PDF_FONT_MONOSPACED_DESC"
+			   label="PLG_SOLIDRES_INVOICE_PDF_FONT_MONOSPACED_LABEL"
+			   size="5"/>
+        <field name="solidres_invoice_pdf_image_scale_ratio" type="text"
+			   default="1.25"
+			   description="PLG_SOLIDRES_INVOICE_PDF_IMAGE_SCALE_RATIO_DESC"
+			   label="PLG_SOLIDRES_INVOICE_PDF_IMAGE_SCALE_RATIO_LABEL"
+			   size="5"/>
+    </fieldset>
+
+</config>

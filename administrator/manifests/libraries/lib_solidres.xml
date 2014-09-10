@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="library" version="3.0" method="upgrade">
+	<name>lib_solidres</name>
+	<libraryname>solidres</libraryname>
+	<description>Solidres library</description>
+	<creationDate>Aug 2014</creationDate>
+	<author>Solidres Team</author>
+	<authorEmail>contact@solidres.com</authorEmail>
+	<authorUrl>http://www.solidres.com</authorUrl>
+    <copyright>Copyright (C) 2013 - 2014 Solidres. All rights reserved.</copyright>
+	<license>GNU General Public License version 3, or later</license>
+	<version>0.7.1</version>
+	<packager>Solidres Team</packager>
+	<packagerurl>http://www.solidres.com</packagerurl>
+	<updateservers></updateservers>
+	<files folder="solidres">
+		<file>defines.php</file>
+		<file>version.php</file>
+		<file>factory.php</file>
+        <folder>config</folder>
+        <folder>coupon</folder>
+        <folder>currency</folder>
+        <folder>html</folder>
+        <folder>mail</folder>
+        <folder>media</folder>
+		<folder>pagination</folder>
+        <folder>payment</folder>
+        <folder>reservation</folder>
+		<folder>roomtype</folder>
+        <folder>user</folder>
+        <folder>utilities</folder>
+	</files>
+    <languages folder="language">
+        <language tag="el-GR">el-GR/el-GR.lib_solidres.ini</language>
+        <language tag="el-GR">el-GR/el-GR.lib_solidres.sys.ini</language>
+		<language tag="en-GB">en-GB/en-GB.lib_solidres.ini</language>
+        <language tag="en-GB">en-GB/en-GB.lib_solidres.sys.ini</language>
+		<language tag="it-IT">it-IT/it-IT.lib_solidres.ini</language>
+        <language tag="it-IT">it-IT/it-IT.lib_solidres.sys.ini</language>
+		<language tag="pt-BR">pt-BR/pt-BR.lib_solidres.ini</language>
+        <language tag="pt-BR">pt-BR/pt-BR.lib_solidres.sys.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.lib_solidres.ini</language>
+        <language tag="ru-RU">ru-RU/ru-RU.lib_solidres.sys.ini</language>
+    </languages>
+</extension>

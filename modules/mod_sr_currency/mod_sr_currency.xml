@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension
+	type="module"
+	version="3.0"
+	client="site"
+	method="upgrade">
+	<name>mod_sr_currency</name>
+	<creationDate>Aug 2014</creationDate>
+	<author>Solidres Team</author>
+	<authorEmail>contact@solidres.com</authorEmail>
+	<authorUrl>http://www.solidres.com</authorUrl>
+	<copyright>(C) 2013 Solidres. All rights reserved.</copyright>
+	<license>GNU General Public License version 3, or later</license>
+	<version>0.7.1</version>
+	<description>MOD_SR_CURRENCY_XML_DESCRIPTION</description>
+    <!--<scriptfile>mod_sr_currency.scriptfile.php</scriptfile>-->
+	<files>
+		<filename module="mod_sr_currency">mod_sr_currency.php</filename>
+		<filename>helper.php</filename>
+		<filename>mod_sr_currency.xml</filename>
+		<folder>tmpl</folder>
+		<folder>language</folder>
+	</files>
+	<languages>
+		<language tag="el-GR">language/el-GR/el-GR.mod_sr_currency.ini</language>
+		<language tag="el-GR">language/el-GR/el-GR.mod_sr_currency.sys.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_sr_currency.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_sr_currency.sys.ini</language>
+		<language tag="it-IT">language/it-IT/it-IT.mod_sr_currency.ini</language>
+		<language tag="it-IT">language/it-IT/it-IT.mod_sr_currency.sys.ini</language>
+		<language tag="pt-BR">language/pt-BR/pt-BR.mod_sr_currency.ini</language>
+		<language tag="pt-BR">language/pt-BR/pt-BR.mod_sr_currency.sys.ini</language>
+		<language tag="ru-RU">language/ru-RU/ru-RU.mod_sr_currency.ini</language>
+		<language tag="ru-RU">language/ru-RU/ru-RU.mod_sr_currency.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="options" label="COM_MODULES_BASIC_FIELDSET_LABEL">
+
+			</fieldset>
+			<fieldset
+					name="advanced">
+				<field
+						name="layout"
+						type="modulelayout"
+						label="JFIELD_ALT_LAYOUT_LABEL"
+						description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+						name="moduleclass_sfx"
+						type="textarea" rows="3"
+						label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+						description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+						name="cache"
+						type="list"
+						default="1"
+						label="COM_MODULES_FIELD_CACHING_LABEL"
+						description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+							value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+							value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+						name="cache_time"
+						type="text"
+						default="900"
+						label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+						description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+						name="cachemode"
+						type="hidden"
+						default="static">
+					<option
+							value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

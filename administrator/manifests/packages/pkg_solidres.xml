@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="3.0" method="upgrade">
+	<name>Solidres Full Package</name>
+    <copyright>Copyright (C) 2013 - 2014 Solidres. All rights reserved.</copyright>
+	<packagename>solidres</packagename>
+	<license>GNU General Public License version 3, or later</license>
+    <creationDate>Aug 2014</creationDate>
+	<version>0.7.1</version>
+	<url>http://www.solidres.com</url>
+	<packager>Solidres Team</packager>
+	<packagerurl>http://www.solidres.com</packagerurl>
+    <author>Solidres Team</author>
+    <authorEmail>contact@solidres.com</authorEmail>
+    <authorUrl>http://www.solidres.com</authorUrl>
+	<description>Solidres Installer Package.</description>
+
+    <scriptfile>solidres.scriptfile.php</scriptfile>
+
+    <updateservers>
+    	<server type="collection" priority="1" name="Solidres Update Server">http://www.solidres.com/index.php?option=com_ars&amp;view=update&amp;task=all&amp;format=xml</server>
+    </updateservers>
+
+	<files>
+		<file type="library" 	id="lib_solidres" >lib_solidres.zip</file>
+		<file type="component" 	id="com_solidres" >com_solidres.zip</file>
+		<file type="plugin"		id="solidres" group="content">plg_content_solidres.zip</file>
+		<file type="plugin"		id="solidres" group="extension">plg_extension_solidres.zip</file>
+        <file type="plugin"		id="solidres" group="system">plg_system_solidres.zip</file>
+        <file type="plugin"		id="solidres" group="solidres">plg_solidres_simple_gallery.zip</file>
+        <file type="module"		id="mod_sr_checkavailability" client="site">mod_sr_checkavailability.zip</file>
+        <file type="module"		id="mod_sr_currency" client="site">mod_sr_currency.zip</file>
+	</files>
+</extension>
