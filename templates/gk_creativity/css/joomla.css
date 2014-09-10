@@ -929,7 +929,9 @@ div.mod-languages > form {
 	margin: 0 3px
 }
 div.mod-languages {
-	text-align: center
+	text-align: center;
+  margin: -50px -20px;
+  float: right;
 }
 div.mod-languages p {
 	margin-bottom: .5em
@@ -941,7 +943,7 @@ div.mod-languages p {
 }
 div.mod-languages > ul.lang-block > li,
 div.mod-languages > ul.lang-inline > li {
-	line-height: 32px;
+	line-height: 25px;
 	margin: 0 5px
 }
 .mod-languages ul li.lang-active {

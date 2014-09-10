@@ -21,7 +21,10 @@ ul.sigProGalleria { margin:0 auto!important; padding:0!important; list-style:non
 /* Placeholder */
 a.sigProGalleriaTargetLink { display:block; }
 a.sigProGalleriaTargetLink img { display:block; width:100%; height:auto; }
-p.sigProGalleriaTargetTitle { display:block; font-size:24px; line-height:120%; padding:4px; font-family:Georgia, "Times New Roman", Times, serif; color:#eee; }
+p.sigProGalleriaTargetTitle {
+/* display:block; */
+display: none;
+font-size:24px; line-height:120%; padding:4px; font-family:Georgia, "Times New Roman", Times, serif; color:#eee; }
 
 /* Thumbnail */
 ul.sigProGalleria li.sigProThumb { float:left; background:none!important; margin:0 2px 2px 0; padding:0; border:none!important; }

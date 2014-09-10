@@ -3,7 +3,7 @@
  * @package     Joomla.Administrator
  * @subpackage  Template.hathor
  *
- * @copyright   Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
+ * @copyright   Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -23,7 +23,7 @@ $listOrder	= $this->escape($this->state->get('list.ordering'));
 $listDirn	= $this->escape($this->state->get('list.direction'));
 $ordering 	= ($listOrder == 'a.lft');
 $saveOrder 	= ($listOrder == 'a.lft' && $listDirn == 'asc');
-$assoc		= isset($app->item_associations) ? $app->item_associations : 0;
+$assoc		= JLanguageAssociations::isEnabled();
 ?>
 <div class="categories">
 	<form action="<?php echo JRoute::_('index.php?option=com_categories&view=categories'); ?>" method="post" name="adminForm" id="adminForm">
@@ -68,6 +68,12 @@ $assoc		= isset($app->item_associations) ? $app->item_associations : 0;
 						<?php echo JHtml::_('select.options', JHtml::_('contentlanguage.existing', true, true), 'value', 'text', $this->state->get('filter.language')); ?>
 					</select>
 
+					<label class="selectlabel" for="filter_tag"><?php echo JText::_('JOPTION_SELECT_TAG'); ?></label>
+					<select name="filter_tag" class="inputbox" id="filter_tag">
+						<option value=""><?php echo JText::_('JOPTION_SELECT_TAG'); ?></option>
+						<?php echo JHtml::_('select.options', JHtml::_('tag.options', true, true), 'value', 'text', $this->state->get('filter.tag')); ?>
+					</select>
+
 					<button type="submit" id="filter-go">
 						<?php echo JText::_('JSUBMIT'); ?></button>
 				</div>
@@ -110,7 +116,6 @@ $assoc		= isset($app->item_associations) ? $app->item_associations : 0;
 				</thead>
 
 				<tbody>
-					<?php $originalOrders = array(); ?>
 					<?php foreach ($this->items as $i => $item) : ?>
 						<?php
 						$orderkey = array_search($item->id, $this->ordering[$item->parent_id]);
@@ -153,7 +158,6 @@ $assoc		= isset($app->item_associations) ? $app->item_associations : 0;
 									<?php endif; ?>
 									<?php $disabled = $saveOrder ? '' : 'disabled="disabled"'; ?>
 									<input type="text" name="order[]" value="<?php echo $orderkey + 1; ?>" <?php echo $disabled ?> class="text-area-order" title="<?php echo $item->title; ?> order" />
-									<?php $originalOrders[] = $orderkey + 1; ?>
 								<?php else : ?>
 									<?php echo $orderkey + 1; ?>
 								<?php endif; ?>
@@ -195,7 +199,6 @@ $assoc		= isset($app->item_associations) ? $app->item_associations : 0;
 			<input type="hidden" name="boxchecked" value="0" />
 			<input type="hidden" name="filter_order" value="<?php echo $listOrder; ?>" />
 			<input type="hidden" name="filter_order_Dir" value="<?php echo $listDirn; ?>" />
-			<input type="hidden" name="original_order_values" value="<?php echo implode($originalOrders, ','); ?>" />
 			<?php echo JHtml::_('form.token'); ?>
 		</div>
 	</form>
