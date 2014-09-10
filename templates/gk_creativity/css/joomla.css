@@ -980,6 +980,16 @@ div.mod-languages > ul.lang-inline > li {
 	-webkit-transform: scale(1.1);
 	transform: scale(1.1)
 }
+
+div.mod-languages.lang-small { 
+  display: block;
+  margin: 0 0;
+
+}
+
+@media only screen and (min-width: 820px) {
+  .mod-languages.lang-small { display: none!important; }
+}
 legend.hidelabeltxt,
 .filters .hidelabeltxt,
 .contact .jicons-icons,

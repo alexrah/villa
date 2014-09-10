@@ -16,7 +16,7 @@ ul.sigProClassic { margin:8px auto!important; padding:8px 0!important; list-styl
 	ul.sigProClassic.singleThumbGallery { margin:0!important; padding:8px 0!important; list-style:none!important; float:left; }
 
 /* Thumbnail */
-ul.sigProClassic li.sigProThumb { /* float:left; */ background:#fff!important; margin:5px; padding:0; list-style:none!important; display: inline-block;}
+ul.sigProClassic li.sigProThumb { float:left; background:#fff!important; margin:5px; padding:0; list-style:none!important; }
 
 /* width:33%; to force columns */
 ul.sigProClassic li.sigProThumb span.sigProLinkOuterWrapper { display:block; float:left; margin:0; padding:0 5px 5px 0; background:url(../images/shadowAlpha.png) no-repeat right bottom; }

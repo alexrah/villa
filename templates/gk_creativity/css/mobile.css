@@ -622,5 +622,15 @@ span#fb-auth {
 }
 
 .box .gkPage {
-	max-width: 280px;
+	/* max-width: 280px; */
+}
+
+div.mod-languages.lang-small { 
+  display: block;
+  margin: 0 0;
+
+}
+
+@media only screen and (min-width: 820px) {
+  .mod-languages.lang-small { display: none; }
 }
