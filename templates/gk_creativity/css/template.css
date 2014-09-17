@@ -858,3 +858,5 @@ body[data-mobile="true"] #gkMobileMenu select {
 .bigtitle .header, h1, h2, h3, h4, h5, h6, .gkMenu ul li, .box.menu, .gkTabsWrap ol li {
 font-family: 'Baskerville';
 }
+
+.itemsCategory { display: none; }

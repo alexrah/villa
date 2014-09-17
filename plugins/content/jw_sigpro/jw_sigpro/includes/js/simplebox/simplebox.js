@@ -1,21 +1,10 @@
 /**
- * @version		1.0
+ * @version		1.0.1
  * @package		SimpleBox
- * @author		Fotis Evangelou - http://nuevvo.com/labs/simplebox/
- * @copyright	Copyright (c) 2006 - 2012 Fotis Evangelou. All rights reserved.
+ * @author		Fotis Evangelou - http://fotis.co/projects/simplebox
+ * @copyright	Copyright (c) 2008-2014 Fotis Evangelou. All rights reserved.
  * @license		GNU/GPL license: http://www.gnu.org/copyleft/gpl.html
  */
- 
-/* Last update: April 10th, 2008 */
-
-/*
-TO DO:
-- fix IE6 overlay
-- namespace js
-- switch to inline img element instead of bg
-- add animation
-- add image navigation
-*/
 
 // Parameters
 var sbLoaderSide = 100;
@@ -40,11 +29,12 @@ function simpleBox() {
 	if(!document.getElementById) return false;
 	var a = document.getElementsByTagName("a");
 	for(var i=0; i<a.length; i++){
-		
+
 		if(/simplebox/.test(a[i].getAttribute("rel"))){
 			a[i].onclick = function(){
 				var imgSource = this.getAttribute("href");
 				var imgTitle = this.getAttribute("title");
+				if(!imgTitle) imgTitle = 'Viewing images from the article '+document.title;
 				buildImgPopup(imgSource,imgTitle);
 				return false;
 			}
@@ -83,14 +73,14 @@ function buildImgPopup(sbImg,sbTitle){
 	var imgContainer = document.getElementById(sbImageId);
 	imgContainer.style.background = "url("+sbImg+") no-repeat 50% 50%";
 	imgContainer.style.display = "none";
-	
+
 	var imgCaption = document.getElementById(sbCaptionId);
 	imgCaption.style.display = "none";
 
 	// create the image object
 	var image = new Image();
 	image.onload = function(){
-	
+
 		// Grab image dimensions and do some resizing
 		if(resizeImage){
 			var resizeHeight = document.documentElement.clientHeight-40;
@@ -107,9 +97,9 @@ function buildImgPopup(sbImg,sbTitle){
 			imgHeight = image.height;
 			imgWidth = image.width;
 		}
-		
+
 		// Hide the loading icon
-		setTimeout(function(){div.style.background = "#060606";},300);			
+		setTimeout(function(){div.style.background = "#060606";},300);
 		// provide new dimensions for the container
 		setTimeout(function(){
 			div.style.width = imgWidth+'px';
@@ -124,10 +114,10 @@ function buildImgPopup(sbImg,sbTitle){
 		},900);
 
 	}
-	
+
 	// Append the image source so IE can read image dimensions properly
 	image.src = sbImg;
-	
+
 	// Destroy HTML created for the popup
 	var closeLinks = jwlbcontainer.getElementsByTagName("a");
 	for(var j=0; j<closeLinks.length; j++){

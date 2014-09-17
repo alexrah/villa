@@ -1,8 +1,8 @@
 /**
- * @version		$Id: template.css 2836 2013-04-12 15:25:49Z joomlaworks $
+ * @version		3.0.x
  * @package		Simple Image Gallery Pro
  * @author		JoomlaWorks - http://www.joomlaworks.net
- * @copyright	Copyright (c) 2006 - 2013 JoomlaWorks Ltd. All rights reserved.
+ * @copyright	Copyright (c) 2006 - 2014 JoomlaWorks Ltd. All rights reserved.
  * @license		http://www.joomlaworks.net/license
  */
 
@@ -50,7 +50,7 @@ body.sigProIsIE7 ul.sigProElegant li.sigProThumb a.sigProLink,
 body.sigProIsIE7 ul.sigProElegant li.sigProThumb a.sigProLink:hover { float:left; }
 
 /* Flickr Set link */
-a.sigProFlickrSetLink {display:block;clear:left;padding:2px 8px;}
+a.sigProFlickrSetLink {display:block;clear:left;padding:2px 8px;font-size:10px;text-align:center;}
 
 /* Print message */
 .sigProPrintMessage {display:none;}

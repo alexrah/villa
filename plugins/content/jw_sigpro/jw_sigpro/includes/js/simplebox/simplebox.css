@@ -1,12 +1,10 @@
 /**
- * @version		1.0
+ * @version		1.0.1
  * @package		SimpleBox
- * @author		Fotis Evangelou - http://nuevvo.com/labs/simplebox/
- * @copyright	Copyright (c) 2006 - 2012 Fotis Evangelou. All rights reserved.
+ * @author		Fotis Evangelou - http://fotis.co/projects/simplebox
+ * @copyright	Copyright (c) 2008-2014 Fotis Evangelou. All rights reserved.
  * @license		GNU/GPL license: http://www.gnu.org/copyleft/gpl.html
  */
- 
-/* Last update: April 10th, 2008 */
 
 /* SimpleBox */
 #jwSBoverlay { position:absolute; top:0; left:0; margin:0; padding:0; width:100%; height:100%; z-index:1000100; }

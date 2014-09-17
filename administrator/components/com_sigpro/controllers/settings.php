@@ -3,7 +3,7 @@
  * @version		$Id$
  * @package		Simple Image Gallery Pro
  * @author		JoomlaWorks - http://www.joomlaworks.net
- * @copyright	Copyright (c) 2006 - 2013 JoomlaWorks Ltd. All rights reserved.
+ * @copyright	Copyright (c) 2006 - 2014 JoomlaWorks Ltd. All rights reserved.
  * @license		http://www.joomlaworks.net/license
  */
 
@@ -35,6 +35,13 @@ class SigProControllerSettings extends SigProController
 			$id = JRequest::getInt('id');
 			$option = JRequest::getCmd('component');
 
+			// Joomla! 3.2 compatibility
+			if (version_compare(JVERSION, '3.2', 'ge'))
+			{
+				require_once JPATH_SITE.'/components/com_config/model/cms.php';
+				require_once JPATH_SITE.'/components/com_config/model/form.php';
+			}
+
 			// Validate the form
 			JForm::addFormPath(JPATH_ADMINISTRATOR.'/components/'.$option);
 			$form = JForm::getInstance('com_sigpro.settings', 'config', array('control' => 'jform', 'load_data' => $loadData), false, '/config');
@@ -49,7 +56,7 @@ class SigProControllerSettings extends SigProController
 				$response->type = 'warning';
 				return $response;
 			}
-			
+
 			$data = array('params' => $params, 'id' => $id, 'option' => $option);
 		}
 		else
@@ -61,6 +68,13 @@ class SigProControllerSettings extends SigProController
 		$model = SigProModel::getInstance('Settings', 'SigProModel');
 		$model->setState('option', 'com_sigpro');
 		$model->setState('data', $data);
+
+		if (version_compare(JVERSION, '3.0', 'ge'))
+		{
+			$options = array('defaultgroup' => '_system', 'cachebase' => JPATH_ADMINISTRATOR.'/cache');
+			$cache = JCache::getInstance('callback', $options);
+			$cache->clean();
+		}
 
 		$response = new stdClass;
 		if ($model->save())

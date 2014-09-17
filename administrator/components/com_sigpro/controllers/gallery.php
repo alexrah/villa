@@ -1,9 +1,9 @@
 <?php
 /**
- * @version		$Id: gallery.php 3126 2013-05-30 12:51:07Z lefteris.kavadas $
+ * @version		3.0.x
  * @package		Simple Image Gallery Pro
  * @author		JoomlaWorks - http://www.joomlaworks.net
- * @copyright	Copyright (c) 2006 - 2013 JoomlaWorks Ltd. All rights reserved.
+ * @copyright	Copyright (c) 2006 - 2014 JoomlaWorks Ltd. All rights reserved.
  * @license		http://www.joomlaworks.net/license
  */
 
@@ -33,6 +33,7 @@ class SigProControllerGallery extends SigProController
 		$model->setState('folder', $folder);
 		$response = $model->upload();
 		echo SigProHelper::getJSON($response);
+		@header ("Connection: close");
 		exit ;
 	}
 

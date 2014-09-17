@@ -1,9 +1,9 @@
 <?php
 /**
- * @version		$Id: helper.php 2831 2013-04-12 14:40:57Z joomlaworks $
+ * @version		3.0.x
  * @package		Simple Image Gallery Pro
  * @author		JoomlaWorks - http://www.joomlaworks.net
- * @copyright	Copyright (c) 2006 - 2013 JoomlaWorks Ltd. All rights reserved.
+ * @copyright	Copyright (c) 2006 - 2014 JoomlaWorks Ltd. All rights reserved.
  * @license		http://www.joomlaworks.net/license
  */
 
@@ -172,6 +172,9 @@ class SimpleImageGalleryProHelper
 
 		// Initiate array to hold gallery
 		$gallery = array();
+		
+		// Fix the image array keys
+		$found = array_values($found);
 
 		// Loop through the image file list
 		foreach ($found as $key => $filename)
@@ -220,7 +223,7 @@ class SimpleImageGalleryProHelper
 
 			if ($downloadFile)
 			{
-				$gallery[$key]->downloadLink = self::replaceHtml('<br /><a class="sigProDownloadLink" href="'.$downloadFile.'?file='.$srcimgfolder.'/'.self::replaceWhiteSpace($filename).'">'.JText::_('JW_SIGP_LABELS_05').'</a>');
+				$gallery[$key]->downloadLink = self::replaceHtml('<br /><a class="sigProDownloadLink" href="'.$downloadFile.'?file='.$srcimgfolder.'/'.self::replaceWhiteSpace($filename).'" download>'.JText::_('JW_SIGP_LABELS_05').'</a>');
 			}
 			else
 			{
@@ -291,7 +294,7 @@ class SimpleImageGalleryProHelper
 				// convert and save all thumbs to .jpg
 				$success = imagejpeg($thumb, $thumbimage, $jpg_quality);
 
-				// Bail out if there is a problem in the GD conversion
+				// bail out if there is a problem in the GD conversion
 				if (!$success)
 					return;
 
@@ -311,7 +314,7 @@ class SimpleImageGalleryProHelper
 			$gallery[$key]->width = $thb_width;
 			$gallery[$key]->height = $thb_height;
 
-		}// foreach loop
+		} // foreach loop
 
 		// OUTPUT
 		return $gallery;

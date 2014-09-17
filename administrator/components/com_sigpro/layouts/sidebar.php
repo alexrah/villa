@@ -3,7 +3,7 @@
  * @version		$Id$
  * @package		Simple Image Gallery Pro
  * @author		JoomlaWorks - http://www.joomlaworks.net
- * @copyright	Copyright (c) 2006 - 2013 JoomlaWorks Ltd. All rights reserved.
+ * @copyright	Copyright (c) 2006 - 2014 JoomlaWorks Ltd. All rights reserved.
  * @license		http://www.joomlaworks.net/license
  */
 
@@ -23,7 +23,7 @@ defined('_JEXEC') or die ;
 					<i class="hidden"><?php echo JText::_('COM_SIGPRO_SETTINGS'); ?></i>
 				</a>
 				<?php endif; ?>
-				<a href="http://www.joomlaworks.net/docs/simple-image-gallery-pro" target="_blank" title="<?php echo JText::_('COM_SIGPRO_DOCUMENTATION'); ?>" class="sig-icon-help-circled">
+				<a href="http://www.joomlaworks.net/support/docs/simple-image-gallery-pro" target="_blank" title="<?php echo JText::_('COM_SIGPRO_DOCUMENTATION'); ?>" class="sig-icon-help-circled">
 					<i class="hidden"><?php echo JText::_('COM_SIGPRO_DOCUMENTATION'); ?></i>
 				</a>
 			</div>

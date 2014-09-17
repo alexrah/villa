@@ -48,6 +48,7 @@ if ( typeof (Joomla) === 'undefined') {
 Joomla.submitbutton = function(pressbutton) {
 	if (pressbutton === 'add') {
 		$sig('#sigProModal').css('margin-left', '-' + ($sig('#sigProModal').outerWidth()) / 2 + 'px');
+		window.scrollTo(0,0);
 		$sig('#sigProModal').animate({
 			'top' : '0'
 		}, 'fast');
@@ -361,7 +362,7 @@ $sig(document).ready(function() {
 	if (editor !== '') {
 		$sig('.sigProInsertButton').click(function(event) {
 			event.preventDefault();
-			var gallery = $sig(this).attr('href');
+			var gallery = $sig(this).data('path');
 			var width = $sig('input[name=width]').val();
 			var height = $sig('input[name=height]').val();
 			var displayMode = $sig('select[name=displayMode]').val();

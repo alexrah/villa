@@ -1,9 +1,9 @@
 <?php
 /**
- * @version		$Id: script.sigpro.php 2769 2013-04-09 11:07:31Z lefteris.kavadas $
+ * @version		3.0.x
  * @package		Simple Image Gallery Pro
  * @author		JoomlaWorks - http://www.joomlaworks.net
- * @copyright	Copyright (c) 2006 - 2013 JoomlaWorks Ltd. All rights reserved.
+ * @copyright	Copyright (c) 2006 - 2014 JoomlaWorks Ltd. All rights reserved.
  * @license		http://www.joomlaworks.net/license
  */
 

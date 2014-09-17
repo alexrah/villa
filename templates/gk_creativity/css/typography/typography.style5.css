@@ -82,7 +82,8 @@ ul.gkBullet1 li,  ul.gkBullet2 li,  ul.gkBullet3 li,  ul.gkBullet4 li,  #k2Conta
 	list-style: none;
 	margin: 0!important;
 	overflow: inherit;
-	padding: 2px 0 2px 28px;
+	/* padding: 2px 0 2px 28px; */
+  padding: 0;
 	position: relative
 }
 .itemBody > div > ul li:before,
@@ -326,7 +327,7 @@ div.gkLegend1 h4 {
 .itemBody > div > ul li:before,
 ul.gkBullet1 li:before,  #k2Container .itemFullText ul li:before,  #k2Container .itemIntroText ul li:before {
 	color: #222;
-	content: "\f00c";
+	/* content: "\f00c"; */
 }
 ul.gkBullet2 li:before {
 	color: #222;

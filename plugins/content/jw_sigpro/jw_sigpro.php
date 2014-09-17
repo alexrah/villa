@@ -1,9 +1,9 @@
 <?php
 /**
- * @version		$Id: jw_sigpro.php 3445 2013-08-23 17:09:24Z joomlaworks $
+ * @version		3.0.x
  * @package		Simple Image Gallery Pro
  * @author		JoomlaWorks - http://www.joomlaworks.net
- * @copyright	Copyright (c) 2006 - 2013 JoomlaWorks Ltd. All rights reserved.
+ * @copyright	Copyright (c) 2006 - 2014 JoomlaWorks Ltd. All rights reserved.
  * @license		http://www.joomlaworks.net/license
  */
 
@@ -22,8 +22,8 @@ class plgContentJw_sigpro extends JPlugin
 	// JoomlaWorks reference parameters
 	var $plg_name = "jw_sigpro";
 	var $plg_tag = "gallery";
-	var $plg_copyrights_start = "\n\n<!-- JoomlaWorks \"Simple Image Gallery Pro\" Plugin (v3.0.3) starts here -->\n";
-	var $plg_copyrights_end = "\n<!-- JoomlaWorks \"Simple Image Gallery Pro\" Plugin (v3.0.3) ends here -->\n\n";
+	var $plg_copyrights_start = "\n\n<!-- JoomlaWorks \"Simple Image Gallery Pro\" Plugin (v3.0.6) starts here -->\n";
+	var $plg_copyrights_end = "\n<!-- JoomlaWorks \"Simple Image Gallery Pro\" Plugin (v3.0.6) ends here -->\n\n";
 
 	function plgContentJw_sigpro(&$subject, $params)
 	{
@@ -226,8 +226,7 @@ class plgContentJw_sigpro extends JPlugin
 					$gal_template = (array_key_exists(6, $tagparams) && $tagparams[6] != '') ? $tagparams[6] : $thb_template;
 
 					// Backwards compatibility
-					if ($gal_template == 'Default')
-						$gal_template = 'Classic';
+					if ($gal_template == 'Default') $gal_template = 'Classic';
 
 					// Dev assignments
 					if($sigplt) $gal_template = $sigplt;
@@ -275,12 +274,10 @@ class plgContentJw_sigpro extends JPlugin
 					// Get the Flickr set
 					/* example tag: {gallery}http://www.flickr.com/photos/joomlaworks/sets/72157626907305094/:20:200:80:1:2:jquery_colorbox:Galleria{/gallery} */
 
-					if (substr($tagcontent, 0, 7) != 'http://')
-						$tagcontent = 'http://'.$tagcontent;
-
-					$tempFlickrParams = explode('http://', $tagcontent);
+					if (substr($tagcontent, 0, 4) != 'http') $tagcontent = 'http://'.$tagcontent;
+					$tempFlickrParams = explode('://', $tagcontent); // remove the protocol so it doesn't mess with the produced param array
 					$flickrParams = explode(':', $tempFlickrParams[1]);
-					$flickrSetUrl = $flickrParams[0];
+					$flickrSetUrl = 'https://'.$flickrParams[0]; // re-insert the protocol
 					$gal_count = (array_key_exists(1, $flickrParams) && $flickrParams[1] != '') ? $flickrParams[1] : $flickrImageCount;
 					$gal_width = (array_key_exists(2, $flickrParams) && $flickrParams[2] != '') ? $flickrParams[2] : $thb_width;
 					$gal_height = (array_key_exists(3, $flickrParams) && $flickrParams[3] != '') ? $flickrParams[3] : $thb_height;
@@ -290,8 +287,7 @@ class plgContentJw_sigpro extends JPlugin
 					$gal_template = (array_key_exists(7, $flickrParams) && $flickrParams[7] != '') ? $flickrParams[7] : $thb_template;
 
 					// Backwards compatibility
-					if ($gal_template == 'Default')
-						$gal_template = 'Classic';
+					if ($gal_template == 'Default') $gal_template = 'Classic';
 
 					// Dev assignments
 					if($sigplt) $gal_template = $sigplt;
@@ -299,16 +295,14 @@ class plgContentJw_sigpro extends JPlugin
 					if($sigpw) $gal_width = $sigpw;
 					if($sigph) $gal_height = $sigph;
 
-					if (substr($flickrSetUrl, 0, 7) != 'http://')
-						$flickrSetUrl = 'http://'.$flickrSetUrl;
-
+					// Get Flickr required stuff
 					$flickrRegex = "#flickr.com/photos/(.*?)/sets/(.*?)/#s";
 					if (preg_match_all($flickrRegex, $flickrSetUrl, $flickrMatches, PREG_PATTERN_ORDER) > 0)
 					{
 						$flickrUsername = $flickrMatches[1][0];
 						$flickrSetId = $flickrMatches[2][0];
 
-						$flickrJson = 'http://query.yahooapis.com/v1/public/yql?q='.urlencode('SELECT * FROM query.multi WHERE queries=\'SELECT * FROM flickr.photosets.info WHERE api_key="'.$flickrApiKey.'" and photoset_id="'.$flickrSetId.'"; SELECT * FROM flickr.photosets.photos('.$gal_count.') WHERE api_key="'.$flickrApiKey.'" and photoset_id="'.$flickrSetId.'" and extras="description, date_upload, date_taken, path_alias, url_sq, url_t, url_s, url_m, url_o"\'').'&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys';
+						$flickrJson = 'https://query.yahooapis.com/v1/public/yql?q='.urlencode('SELECT * FROM yql.query.multi WHERE queries=\'SELECT * FROM flickr.photosets.info WHERE api_key="'.$flickrApiKey.'" and photoset_id="'.$flickrSetId.'"; SELECT * FROM flickr.photosets.photos('.$gal_count.') WHERE api_key="'.$flickrApiKey.'" and photoset_id="'.$flickrSetId.'" and extras="description, date_upload, date_taken, path_alias, url_sq, url_t, url_s, url_m, url_o"\'').'&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys';
 						if ($yqlMaxAge)
 							$flickrJson .= '&_maxage='.$yqlMaxAge;
 						$flickrJson .= '&callback=';
@@ -364,7 +358,7 @@ class plgContentJw_sigpro extends JPlugin
 
 							if ($downloadFile)
 							{
-								$gallery[$key]->downloadLink = SimpleImageGalleryProHelper::replaceHtml('<br /><a class="sigProDownloadLink" target="_blank" href="'.$photo->url_o.'">'.JText::_('JW_SIGP_LABELS_13').'</a>');
+								$gallery[$key]->downloadLink = SimpleImageGalleryProHelper::replaceHtml('<br /><a class="sigProDownloadLink" target="_blank" href="'.$photo->url_o.'" download>'.JText::_('JW_SIGP_LABELS_13').'</a>');
 							}
 							else
 							{
@@ -488,7 +482,7 @@ class plgContentJw_sigpro extends JPlugin
 					$websiteURL = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != "off") ? "https://".$_SERVER['HTTP_HOST'] : "http://".$_SERVER['HTTP_HOST'];
 					$itemPrintURL = $websiteURL.$_SERVER['REQUEST_URI'];
 					$itemPrintURL = explode("#", $itemPrintURL);
-					$itemPrintURL = $itemPrintURL[0].'#sigProGalleria'.$gal_id;
+					$itemPrintURL = $itemPrintURL[0].'#sigProId'.$gal_id;
 				}
 				else
 				{

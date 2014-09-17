@@ -1,9 +1,9 @@
 <?php
 /**
- * @version		$Id: default.php 2827 2013-04-12 12:57:36Z joomlaworks $
+ * @version		3.0.x
  * @package		Simple Image Gallery Pro
  * @author		JoomlaWorks - http://www.joomlaworks.net
- * @copyright	Copyright (c) 2006 - 2013 JoomlaWorks Ltd. All rights reserved.
+ * @copyright	Copyright (c) 2006 - 2014 JoomlaWorks Ltd. All rights reserved.
  * @license		http://www.joomlaworks.net/license
  */
 
@@ -18,7 +18,7 @@ $document->addScript($pluginLivePath.'/tmpl/Galleria/js/behaviour.js');
 
 	<div class="sigProGalleriaPlaceholderContainer">
 		<div class="sigProGalleriaPlaceholder">
-			<a href="<?php echo $gallery[0]->sourceImageFilePath; ?>" class="sigProGalleriaTargetLink<?php echo $extraClass; ?>" rel="<?php echo $relName; ?>[gallery<?php echo $gal_id; ?>]" title="<?php echo $gallery[0]->captionDescription.$gallery[0]->downloadLink.$modulePosition; ?>" target="_blank"<?php echo $customLinkAttributes; ?>>
+			<a href="<?php echo $gallery[0]->sourceImageFilePath; ?>" class="sigProGalleriaTargetLink<?php echo $extraClass; ?>" rel="<?php echo $relName; ?>" title="<?php echo $gallery[0]->captionDescription.$gallery[0]->downloadLink.$modulePosition; ?>" target="_blank">
 				<img class="sigProGalleriaTargetImg" src="<?php echo $gallery[0]->sourceImageFilePath; ?>" alt="<?php echo JText::_('JW_SIGP_LABELS_08').' '.$gallery[0]->filename; ?>" title="<?php echo JText::_('JW_SIGP_LABELS_08').' '.$gallery[0]->filename; ?>" />
 			</a>
 			<p class="sigProGalleriaTargetTitle"><?php echo $gallery[0]->captionTitle; ?></p>

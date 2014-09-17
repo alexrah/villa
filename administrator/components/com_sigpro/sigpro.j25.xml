@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="component" version="2.5" method="upgrade">
 	<name>COM_SIGPRO</name>
-	<creationDate>August 23rd, 2013</creationDate>
+	<creationDate>June 27th, 2014</creationDate>
 	<author>JoomlaWorks</author>
 	<authorEmail>please-use-the-contact-form@joomlaworks.net</authorEmail>
 	<authorUrl>www.joomlaworks.net</authorUrl>
-	<copyright>Copyright (c) 2006 - 2013 JoomlaWorks Ltd.</copyright>
+	<copyright>Copyright (c) 2006 - 2014 JoomlaWorks Ltd.</copyright>
 	<license>http://www.joomlaworks.net/license</license>
-	<version>3.0.3</version>
+	<version>3.0.6</version>
 	<description></description>
 	<installfile>install.sigpro.php</installfile>
 	<uninstallfile>uninstall.sigpro.php</uninstallfile>

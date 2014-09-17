@@ -1,9 +1,9 @@
 <?php
 /**
- * @version		$Id: sigpro.php 2725 2013-04-06 17:05:49Z joomlaworks $
+ * @version		3.0.x
  * @package		Simple Image Gallery Pro
  * @author		JoomlaWorks - http://www.joomlaworks.net
- * @copyright	Copyright (c) 2006 - 2013 JoomlaWorks Ltd. All rights reserved.
+ * @copyright	Copyright (c) 2006 - 2014 JoomlaWorks Ltd. All rights reserved.
  * @license		http://www.joomlaworks.net/license
  */
 
@@ -54,6 +54,59 @@ $type = JRequest::getCmd('type');
 if ($type != 'site' && $type != 'k2')
 {
 	JRequest::setVar('type', 'site');
+}
+
+// K2 galleries permissions check
+if ($application->isSite() && $type == 'k2')
+{
+	$canAccess = true;
+	$task = JRequest::getWord('task');
+	$folder = ($view == 'galleries' && $task == 'create') ? JRequest::getInt('newFolder') : JRequest::getInt('folder');
+	require_once JPATH_SITE.'/components/com_k2/helpers/permissions.php';
+	K2HelperPermissions::setPermissions();
+	JTable::addIncludePath(JPATH_ADMINISTRATOR.'/components/com_k2/tables');
+	$row = JTable::getInstance('K2Item', 'Table');
+	$row->load($folder);
+
+	$isNew = is_null($row->id);
+
+	if ($view == 'galleries')
+	{
+		if ($task == 'create')
+		{
+			if ($isNew && !K2HelperPermissions::canAddItem())
+			{
+				$canAccess = false;
+			}
+			if (!$isNew && !K2HelperPermissions::canEditItem($row->created_by, $row->catid))
+			{
+				$canAccess = false;
+			}
+		}
+		else
+		{
+			$canAccess = false;
+		}
+	}
+	else if ($view == 'gallery')
+	{
+		if ($isNew && !K2HelperPermissions::canAddItem())
+		{
+			$canAccess = false;
+		}
+
+		if (!$isNew && !K2HelperPermissions::canEditItem($row->created_by, $row->catid))
+		{
+			$canAccess = false;
+		}
+	}
+
+	if (!$canAccess)
+	{
+		JError::raiseWarning(403, JText::_('JERROR_ALERTNOAUTHOR'));
+		$application->redirect('index.php');
+	}
+
 }
 
 // Bootstrap

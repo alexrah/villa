@@ -1,8 +1,8 @@
 /**
- * @version		$Id: template.css 2836 2013-04-12 15:25:49Z joomlaworks $
+ * @version		3.0.x
  * @package		Simple Image Gallery Pro
  * @author		JoomlaWorks - http://www.joomlaworks.net
- * @copyright	Copyright (c) 2006 - 2013 JoomlaWorks Ltd. All rights reserved.
+ * @copyright	Copyright (c) 2006 - 2014 JoomlaWorks Ltd. All rights reserved.
  * @license		http://www.joomlaworks.net/license
  */
 
@@ -16,7 +16,7 @@ ul.sigProPolaroids { margin:20px!important; padding:40px 60px!important; list-st
 	ul.sigProPolaroids.singleThumbGallery { margin:0!important; padding:8px 36px 8px 16px!important; list-style:none!important; float:left; }
 
 /* Thumbnail: use e.g. width:33%; to force 3 columns */
-ul.sigProPolaroids li.sigProThumb { display:block; float:left; background:#fff!important; list-style:none!important; margin:20px 0 27px 30px; padding:10px; text-align:center; text-decoration:none; color:#333; font-family:'Indie Flower', arial, serif; font-size:18px;
+ul.sigProPolaroids li.sigProThumb { display:block; float:left; background:#fff!important; list-style:none!important; margin:20px 0 27px 30px; padding:10px; text-align:center; text-decoration:none; color:#333; font-family:'Indie Flower', cursive; font-size:18px;
     -moz-box-shadow: 0px 3px 6px rgba(0,0,0,.25);
  -webkit-box-shadow: 0px 3px 6px rgba(0,0,0,.25);
          box-shadow: 0px 3px 6px rgba(0,0,0,.25);
@@ -80,20 +80,21 @@ ul.sigProPolaroids li.sigProThumb a.sigProLink { color:#333; text-decoration:non
 ul.sigProPolaroids li.sigProThumb a.sigProLink img.sigProImg { display:block; width:100%; margin-bottom:8px; background-repeat:no-repeat; background-position:50% 50%;}
 
 /* Caption */
-ul.sigProPolaroids span.sigProPseudoCaption,ul.sigProPolaroids span.sigProCaption { display:block; text-align:center; font-family:'Indie Flower', arial, serif; font-size:22px; font-weight:bold; }
+ul.sigProPolaroids span.sigProPseudoCaption,ul.sigProPolaroids span.sigProCaption { display:block; text-align:center; font-family:'Indie Flower', cursive; font-size:22px; font-weight:bold; }
 
 /* Popup */
 span.sigProPopupCaption { font-weight:bold; color:#C63C13; font-size:13px; font-family:Georgia, "Times New Roman", Times, serif; }
-a.sigProDownloadLink,a.sigProDownloadLink:hover { background:url(../images/disk.png) no-repeat left center; padding:4px 0 4px 20px; }
+a.sigProDownloadLink,
+a.sigProDownloadLink:hover { background:url(../images/disk.png) no-repeat left center; padding:4px 0 4px 20px; }
 div.sigProModulePosition { text-align:center; border-top:1px solid #ccc; border-bottom:1px solid #ccc; padding:4px; margin:8px 0; background:#ffffdd; }
 
 /* IE specific styling: Use "body.sigProIsIEX element {}" - where X is 6, 7 or 8 - to target elements for these browser versions only */
 body.sigProIsIE6 ul.sigProPolaroids li.sigProThumb,
 body.sigProIsIE7 ul.sigProPolaroids li.sigProThumb,
-body.sigProIsIE8 ul.sigProPolaroids li.sigProThumb {border:1px solid #ccc;border-right:2px solid #ccc;border-bottom:2px solid #ccc;font-family:"Comic Sans MS", cursive, sans-serif;}
+body.sigProIsIE8 ul.sigProPolaroids li.sigProThumb {border:1px solid #ccc;border-right:2px solid #ccc;border-bottom:2px solid #ccc;}
 body.sigProIsIE6 ul.sigProPolaroids li.sigProThumb span.sigProCaption,
 body.sigProIsIE7 ul.sigProPolaroids li.sigProThumb span.sigProCaption,
-body.sigProIsIE8 ul.sigProPolaroids li.sigProThumb span.sigProCaption {font-family:"Comic Sans MS", cursive, sans-serif;}
+body.sigProIsIE8 ul.sigProPolaroids li.sigProThumb span.sigProCaption {}
 body.sigProIsIE7 ul.sigProPolaroids li.sigProThumb {float:none;display:inline;}
 body.sigProIsIE6 ul.sigProPolaroids li.sigProThumb a.sigProLink:hover,
 body.sigProIsIE7 ul.sigProPolaroids li.sigProThumb a.sigProLink:hover,
@@ -102,7 +103,7 @@ body.sigProIsIE6 ul.sigProPolaroids li.sigProThumb a.sigProLink img.sigProImg,
 body.sigProIsIE7 ul.sigProPolaroids li.sigProThumb a.sigProLink img.sigProImg {width:auto;}
 
 /* Flickr Set link */
-a.sigProFlickrSetLink {display:block;clear:left;padding:2px 8px;}
+a.sigProFlickrSetLink {display:block;clear:left;padding:2px 8px;font-size:10px;text-align:center;}
 
 /* Print message */
 .sigProPrintMessage {display:none;}

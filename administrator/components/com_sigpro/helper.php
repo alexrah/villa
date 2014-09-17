@@ -1,9 +1,9 @@
 <?php
 /**
- * @version		$Id: helper.php 3445 2013-08-23 17:09:24Z joomlaworks $
+ * @version		3.0.x
  * @package		Simple Image Gallery Pro
  * @author		JoomlaWorks - http://www.joomlaworks.net
- * @copyright	Copyright (c) 2006 - 2013 JoomlaWorks Ltd. All rights reserved.
+ * @copyright	Copyright (c) 2006 - 2014 JoomlaWorks Ltd. All rights reserved.
  * @license		http://www.joomlaworks.net/license
  */
 
@@ -18,7 +18,7 @@ class SigProHelper
 		$document = JFactory::getDocument();
 		if ($document->getType() == 'html' && JRequest::getCmd('tmpl', 'index') == 'index')
 		{
-			echo '<div id="sigProAdminFooter"><a href="http://www.joomlaworks.net/simple-image-gallery-pro" target="_blank">Simple Image Gallery Pro v3.0.3</a><br />Copyright &copy; 2006-'.date('Y').' <a href="http://www.joomlaworks.net/" target="_blank">JoomlaWorks Ltd.</a></div>';
+			echo '<div id="sigProAdminFooter"><a href="http://www.joomlaworks.net/simple-image-gallery-pro" target="_blank">Simple Image Gallery Pro v3.0.6</a><br />Copyright &copy; 2006-'.date('Y').' <a href="http://www.joomlaworks.net/" target="_blank">JoomlaWorks Ltd.</a></div>';
 		}
 	}
 
@@ -55,9 +55,18 @@ class SigProHelper
 		{
 			$path = JPATH_SITE.'/media/k2/galleries';
 		}
-		else
+		else if($type == 'site')
 		{
-			if ($application->isAdmin())
+			$user = JFactory::getUser();
+			if (version_compare(JVERSION, '2.5', 'ge'))
+			{
+				$isAdmin = $user->authorise('core.admin', 'com_sigpro');
+			}
+			else
+			{
+				$isAdmin = $user->gid == 25;
+			}
+			if ($application->isAdmin() || $isAdmin)
 			{
 				if (version_compare(JVERSION, '1.6.0', 'ge'))
 				{
@@ -70,7 +79,6 @@ class SigProHelper
 
 				$params = JComponentHelper::getParams('com_sigpro');
 				$path = JPATH_SITE.'/'.$params->get('galleries_rootfolder', $defaultImagePath);
-
 			}
 			else
 			{
@@ -81,6 +89,10 @@ class SigProHelper
 					JFolder::create($path);
 				}
 			}
+		}
+		else if($type == 'users')
+		{
+			$path = JPATH_SITE.'/media/jw_sigpro/users';
 		}
 
 		$path = JPath::clean($path);

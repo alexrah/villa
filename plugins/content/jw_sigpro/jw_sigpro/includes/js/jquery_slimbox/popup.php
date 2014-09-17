@@ -1,9 +1,9 @@
 <?php
 /**
- * @version		$Id: popup.php 2725 2013-04-06 17:05:49Z joomlaworks $
+ * @version		3.0.x
  * @package		Simple Image Gallery Pro
  * @author		JoomlaWorks - http://www.joomlaworks.net
- * @copyright	Copyright (c) 2006 - 2013 JoomlaWorks Ltd. All rights reserved.
+ * @copyright	Copyright (c) 2006 - 2014 JoomlaWorks Ltd. All rights reserved.
  * @license		http://www.joomlaworks.net/license
  */
 
@@ -12,7 +12,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 
 $relName = 'lightbox';
 
-$stylesheets = array('css/slimbox2.css');
+$stylesheets = array('css/slimbox2.css?v=2.05');
 $stylesheetDeclarations = array();
-$scripts = array('js/slimbox2.js');
+$scripts = array('js/slimbox2.js?v=2.05');
 $scriptDeclarations = array();

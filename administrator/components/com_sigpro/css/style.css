@@ -1,8 +1,8 @@
 /**
- * @version		$Id: style.css 3341 2013-07-12 13:25:56Z krikor $
+ * @version		3.0.x
  * @package		Simple Image Gallery Pro
  * @author		JoomlaWorks - http://www.joomlaworks.net
- * @copyright	Copyright (c) 2006 - 2013 JoomlaWorks Ltd. All rights reserved.
+ * @copyright	Copyright (c) 2006 - 2014 JoomlaWorks Ltd. All rights reserved.
  * @license		http://www.joomlaworks.net/license
  */
 
@@ -68,7 +68,7 @@ img {-ms-interpolation-mode:bicubic;}
 		.isJVersion15 .sigGrayFix,
 		.isJVersion15 .sigMiddleWhiteFix { z-index: 2; }
 		.isJVersion15 #sigPro { margin-right: 1px; z-index: 3; }
-		
+
 /* Joomla 3.0 */
 body.isJVersion30 {background:#f0f0ee;}
 body.contentpane.isJVersion30 {background:#fff;}
@@ -723,7 +723,7 @@ label.sigCheckbox{padding:0;display:block;margin:0;position:relative;-webkit-tra
 			.isJVersion30 #system-message-container .alert.alert-error:before,
 			.isJVersion30 #system-message-container .alert-danger:before {background-color:#ca0c06;content:'🚫';position:relative;top:1px;}
 			.isJVersion30 #system-message-container .alert.alert-info:before {background-color:#e67f01;content:'\26a0';position:relative;top:1px;}
-		.isJVersion30 #system-message-container .alert h4 {padding:10px 0 0; margin: 0; font-size: 14px; line-height: 16px;}
+		.isJVersion30 #system-message-container .alert h4 {color: #fff; padding:10px 0 0; margin: 0; font-size: 14px; line-height: 16px;}
 		.isJVersion30 #system-message-container .alert p {padding:0 0 10px;margin:0; font-size: 13px; line-height: 18px;}
 		/* System Messages when inside a modal */
 		.contentpane #system-message-container {top:61px;}
@@ -841,7 +841,7 @@ div#deprecatedOverlay {position:absolute;width:100%;height:100%;z-index:99999;le
 	/* J! 1.5 */
 	.isJVersion15 #menu > li > a,
 	.isJVersion15 #menu > li > a:hover {padding:0.35em 0.5em 0.35em; }
-	
+
 	.sigProEditingGalleryTitle .sigStrong { max-width: 150px; }
 }
 
@@ -872,7 +872,7 @@ div#deprecatedOverlay {position:absolute;width:100%;height:100%;z-index:99999;le
 	.isJVersion15 .sigProButton:link, .isJVersion15 .sigProButton:visited { margin-right: 5px; }
 }
 
-/* 
+/*
    Plupload
 ------------------------------------------------------------------- */
 .plupload_button { padding-right: 20px; height: 35px; line-height: 35px; display: inline-block; vertical-align: middle; border-radius: 5px; margin: 0 10px 0 0; text-indent: 50px; position: relative; }
@@ -937,11 +937,11 @@ vertical-align: middle; float: left; }
 .plupload_header_title { color: #c74383; font-size: 18px; letter-spacing: -1px; }
 .plupload_header_text { }
 .plupload_filelist { list-style: none outside none; padding: 0; margin: 0 -20px; }
-.plupload_scroll .plupload_filelist { max-height: 180px; overflow: auto; }
+.plupload_scroll .plupload_filelist { max-height: 175px; overflow: auto; }
 .plupload_filelist li { display: block; vertical-align: top; height: 43px; line-height: 43px; border-bottom: 1px solid #cacaca; padding: 0 20px 0 20px; position: relative; clear: both; }
 .plupload_filelist li:last-child { border-bottom: 0; }
 .plupload_filelist li:after { font-family:'fontello'; font-size: 16px; margin-left: 20px; position: absolute; right: 20px; top: 0; }
-.plupload_filelist_header, 
+.plupload_filelist_header,
 .plupload_filelist_footer { padding: 10px 64px 10px 20px; margin: 0 -20px; }
 .plupload_filelist_header { line-height: 1; box-shadow: 0px 1px 3px rgba(0,0,0,.25), inset 0 1px 0 rgba(0,0,0,.22); }
 .plupload_filelist_footer { border-top: 1px solid #c7c7c7; border-bottom: 1px solid #c7c7c7;  }

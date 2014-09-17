@@ -1,9 +1,9 @@
 <?php
 /**
- * @version		$Id: gallery.php 3113 2013-05-29 10:29:52Z lefteris.kavadas $
+ * @version		3.0.x
  * @package		Simple Image Gallery Pro
  * @author		JoomlaWorks - http://www.joomlaworks.net
- * @copyright	Copyright (c) 2006 - 2013 JoomlaWorks Ltd. All rights reserved.
+ * @copyright	Copyright (c) 2006 - 2014 JoomlaWorks Ltd. All rights reserved.
  * @license		http://www.joomlaworks.net/license
  */
 
@@ -116,7 +116,10 @@ class SigProModelGallery extends SigProModel
 		jimport('joomla.filesystem.file');
 		$file = $this->getState('file');
 		$filename = $this->getState('filename');
-		$response = array('status' => 0, 'error' => '');
+		$response = array(
+			'status' => 0,
+			'error' => ''
+		);
 
 		//Check if file is uploaded
 		if (is_null($file) || !is_uploaded_file($file['tmp_name']))
@@ -129,7 +132,13 @@ class SigProModelGallery extends SigProModel
 			$response['error'] = JText::_('COM_SIGPRO_FILE_IS_NOT_AN_IMAGE');
 		}
 		//Check image type
-		elseif (!in_array($info[2], array(1, 2, 3, 7, 8)))
+		elseif (!in_array($info[2], array(
+			1,
+			2,
+			3,
+			7,
+			8
+		)))
 		{
 			$response['error'] = JText::_('COM_SIGPRO_THIS_IMAGE_IS_NOT_SUPPORTED');
 		}
@@ -224,9 +233,10 @@ class SigProModelGallery extends SigProModel
 				JFile::write($path.'/'.$folder.'/'.$language.'.labels.txt', $buffer);
 				$this->setState('message', JText::_('COM_SIGPRO_GALLERY_CREATED'));
 				$this->setState('folder', $folder);
+				$gallery = '{gallery}'.$folder.'{/gallery}';
 				if ($this->getState('type') == 'k2')
 				{
-					$db->setQuery('UPDATE #__k2_items SET gallery = "{gallery}{/gallery}" WHERE id = '.(int)$folder);
+					$db->setQuery('UPDATE #__k2_items SET gallery = '.$db->quote($gallery).'  WHERE id = '.(int)$folder);
 					$db->query();
 				}
 				return true;

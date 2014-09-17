@@ -1,9 +1,9 @@
 <?php
 /**
- * @version		$Id: popup.php 2829 2013-04-12 14:20:40Z joomlaworks $
+ * @version		3.0.x
  * @package		Simple Image Gallery Pro
  * @author		JoomlaWorks - http://www.joomlaworks.net
- * @copyright	Copyright (c) 2006 - 2013 JoomlaWorks Ltd. All rights reserved.
+ * @copyright	Copyright (c) 2006 - 2014 JoomlaWorks Ltd. All rights reserved.
  * @license		http://www.joomlaworks.net/license
  */
 
@@ -14,16 +14,16 @@ $relName = 'fancybox-button';
 $extraClass = 'fancybox-button';
 
 $stylesheets = array(
-	'fancybox/jquery.fancybox.css?v=2.1.4',
-	'fancybox/helpers/jquery.fancybox-buttons.css?v=2.1.4',
-	'fancybox/helpers/jquery.fancybox-thumbs.css?v=2.1.4'
+	'fancybox/jquery.fancybox.css?v=2.1.5',
+	'fancybox/helpers/jquery.fancybox-buttons.css?v=2.1.5',
+	'fancybox/helpers/jquery.fancybox-thumbs.css?v=2.1.5'
 );
 $stylesheetDeclarations = array();
 $scripts = array(
 	'fancybox/lib/jquery.mousewheel-3.0.6.pack.js',
-	'fancybox/jquery.fancybox.pack.js?v=2.1.4',
-	'fancybox/helpers/jquery.fancybox-buttons.js?v=2.1.4',
-	'fancybox/helpers/jquery.fancybox-thumbs.js?v=2.1.4'
+	'fancybox/jquery.fancybox.pack.js?v=2.1.5',
+	'fancybox/helpers/jquery.fancybox-buttons.js?v=2.1.5',
+	'fancybox/helpers/jquery.fancybox-thumbs.js?v=2.1.5'
 );
 
 if(!defined('PE_FANCYBOX_LOADED')){
@@ -47,4 +47,3 @@ if(!defined('PE_FANCYBOX_LOADED')){
 } else {
 	$scriptDeclarations = array();
 }
-

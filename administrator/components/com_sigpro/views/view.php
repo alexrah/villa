@@ -1,9 +1,9 @@
 <?php
 /**
- * @version		$Id: view.php 3445 2013-08-23 17:09:24Z joomlaworks $
+ * @version		3.0.x
  * @package		Simple Image Gallery Pro
  * @author		JoomlaWorks - http://www.joomlaworks.net
- * @copyright	Copyright (c) 2006 - 2013 JoomlaWorks Ltd. All rights reserved.
+ * @copyright	Copyright (c) 2006 - 2014 JoomlaWorks Ltd. All rights reserved.
  * @license		http://www.joomlaworks.net/license
  */
 
@@ -170,7 +170,11 @@ class SigProView extends SigProViewBase
 		$document = JFactory::getDocument();
 		if ($document->getType() == 'html')
 		{
-
+			if (version_compare(JVERSION, '1.6.0', 'ge'))
+			{
+				JHtml::_('script', 'system/core.js', false, true);
+			}
+			
 			// Meta Heading
 			$document = JFactory::getDocument();
 			$document->setMetaData("viewport", "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no");
@@ -183,8 +187,8 @@ class SigProView extends SigProViewBase
 				$document->addStyleSheet(JURI::root(true).'/administrator/templates/'.$mainframe->getTemplate().'/css/icon.css');
 			}
 			$document->addStyleSheet('//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700&subset=latin,cyrillic,greek,vietnamese');
-			$document->addStyleSheet(JURI::root(true).'/administrator/components/com_sigpro/css/fonts.css?v=3.0.3');
-			$document->addStyleSheet(JURI::root(true).'/administrator/components/com_sigpro/css/style.css?v=3.0.3');
+			$document->addStyleSheet(JURI::root(true).'/administrator/components/com_sigpro/css/fonts.css?v=3.0.6');
+			$document->addStyleSheet(JURI::root(true).'/administrator/components/com_sigpro/css/style.css?v=3.0.6');
 			// elFinder crop and rotate operations are broken under latest versions of jQuery and jQuery UI and we need to load specific versions for this view
 			if ($view == 'media')
 			{
@@ -194,31 +198,31 @@ class SigProView extends SigProViewBase
 			{
 				$document->addScript('//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js');
 			}
-			$document->addScript(JURI::root(true).'/administrator/components/com_sigpro/js/chosen.jquery.min.js?v=3.0.3');
-			$document->addScript(JURI::root(true).'/administrator/components/com_sigpro/js/script.js?v=3.0.3');
+			$document->addScript(JURI::root(true).'/administrator/components/com_sigpro/js/chosen.jquery.min.js?v=3.0.6');
+			$document->addScript(JURI::root(true).'/administrator/components/com_sigpro/js/script.js?v=3.0.6');
 			$document->addScriptDeclaration("var sigProLanguage = new Array('".JText::_('COM_SIGPRO_CHECKING', true)."');");
 			// Load the uploader where needed
 			if ($view == 'gallery')
 			{
 				// Load SwipeBox
-				$document->addScript(JURI::root(true).'/administrator/components/com_sigpro/js/swipebox/ios-orientationchange-fix.js?v=3.0.3');
-				$document->addScript(JURI::root(true).'/administrator/components/com_sigpro/js/swipebox/jquery.swipebox.min.js?v=3.0.3');
-				$document->addStyleSheet(JURI::root(true).'/administrator/components/com_sigpro/js/swipebox/swipebox.css?v=3.0.3');
+				$document->addScript(JURI::root(true).'/administrator/components/com_sigpro/js/swipebox/ios-orientationchange-fix.js?v=3.0.6');
+				$document->addScript(JURI::root(true).'/administrator/components/com_sigpro/js/swipebox/jquery.swipebox.min.js?v=3.0.6');
+				$document->addStyleSheet(JURI::root(true).'/administrator/components/com_sigpro/js/swipebox/swipebox.css?v=3.0.6');
 
 				// Load variables used by the uploader
 				$document->addScriptDeclaration('var SIGMaxFileSize = "'.ini_get('upload_max_filesize').'"; var SIGDeleteWarning = "'.JText::_('COM_SIGPRO_DELETE_WARNING', true).'"; var SIGImagesLabel = "'.JText::_('COM_SIGPRO_IMAGES', true).'";');
 
 				// Load the plupload script
-				$document->addScript(JURI::root(true).'/administrator/components/com_sigpro/js/plupload/plupload.js?v=3.0.3');
+				$document->addScript(JURI::root(true).'/administrator/components/com_sigpro/js/plupload/plupload.js?v=3.0.6');
 
 				// Load the plupload runtimes. Add more?
-				$document->addScript(JURI::root(true).'/administrator/components/com_sigpro/js/plupload/plupload.flash.js?v=3.0.3');
-				$document->addScript(JURI::root(true).'/administrator/components/com_sigpro/js/plupload/plupload.html4.js?v=3.0.3');
-				$document->addScript(JURI::root(true).'/administrator/components/com_sigpro/js/plupload/plupload.html5.js?v=3.0.3');
+				$document->addScript(JURI::root(true).'/administrator/components/com_sigpro/js/plupload/plupload.flash.js?v=3.0.6');
+				$document->addScript(JURI::root(true).'/administrator/components/com_sigpro/js/plupload/plupload.html4.js?v=3.0.6');
+				$document->addScript(JURI::root(true).'/administrator/components/com_sigpro/js/plupload/plupload.html5.js?v=3.0.6');
 
 				// Load the queue widget styles and scripts
 				//$document->addStyleSheet(JURI::root(true).'/administrator/components/com_sigpro/js/plupload/jquery.plupload.queue/css/jquery.plupload.queue.css');
-				$document->addScript(JURI::root(true).'/administrator/components/com_sigpro/js/plupload/jquery.plupload.queue/jquery.plupload.queue.js?v=3.0.3');
+				$document->addScript(JURI::root(true).'/administrator/components/com_sigpro/js/plupload/jquery.plupload.queue/jquery.plupload.queue.js?v=3.0.6');
 
 				// Try to load the approprieate language file for the uploader
 				$language = JFactory::getLanguage();
@@ -232,14 +236,14 @@ class SigProView extends SigProViewBase
 				else
 				{
 					$parts = @explode('_', $tag);
-					if (isset($parts[0]) && JFile::exists(JPATH_COMPONENT.'/js/plupload/i18n/'.$parts[0].'.js'))
+					if (isset($parts[0]) && JFile::exists(JPATH_COMPONENT_ADMINISTRATOR.'/js/plupload/i18n/'.$parts[0].'.js'))
 					{
 						$lang = $parts[0];
 					}
 				}
 				if ($lang)
 				{
-					$document->addScript(JURI::root(true).'/administrator/components/com_sigpro/js/plupload/i18n/'.$lang.'.js?v=3.0.3');
+					$document->addScript(JURI::root(true).'/administrator/components/com_sigpro/js/plupload/i18n/'.$lang.'.js?v=3.0.6');
 				}
 
 			}
@@ -247,9 +251,9 @@ class SigProView extends SigProViewBase
 			{
 				$document->addStyleSheet('//ajax.googleapis.com/ajax/libs/jqueryui/1/themes/smoothness/jquery-ui.css');
 				$document->addScript('//ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js');
-				$document->addStyleSheet(JURI::root(true).'/administrator/components/com_sigpro/js/elfinder/css/elfinder.min.css?v=3.0.3');
-				$document->addStyleSheet(JURI::root(true).'/administrator/components/com_sigpro/js/elfinder/css/theme.css?v=3.0.3');
-				$document->addScript(JURI::root(true).'/administrator/components/com_sigpro/js/elfinder/js/elfinder.min.js?v=3.0.3');
+				$document->addStyleSheet(JURI::root(true).'/administrator/components/com_sigpro/js/elfinder/css/elfinder.min.css?v=3.0.6');
+				$document->addStyleSheet(JURI::root(true).'/administrator/components/com_sigpro/js/elfinder/css/theme.css?v=3.0.6');
+				$document->addScript(JURI::root(true).'/administrator/components/com_sigpro/js/elfinder/js/elfinder.min.js?v=3.0.6');
 
 				// Try to load the approprieate language file for the media manager
 				$language = JFactory::getLanguage();
@@ -270,7 +274,7 @@ class SigProView extends SigProViewBase
 				}
 				if ($lang)
 				{
-					$document->addScript(JURI::root(true).'/administrator/components/com_sigpro/js/elfinder/js/i18n/elfinder.'.$lang.'.js?v=3.0.3');
+					$document->addScript(JURI::root(true).'/administrator/components/com_sigpro/js/elfinder/js/i18n/elfinder.'.$lang.'.js?v=3.0.6');
 					$document->addScriptDeclaration('var sigProMediaManagerLang = "'.$lang.'";');
 				}
 				else
@@ -302,6 +306,16 @@ class SigProView extends SigProViewBase
 
 	public function display($tpl = null)
 	{
+		$user = JFactory::getUser();
+		if (version_compare(JVERSION, '2.5', 'ge'))
+		{
+			$isSuperUser = $user->authorise('core.admin', 'com_sigpro');
+		}
+		else
+		{
+			$isSuperUser = $user->gid == 25;
+		}
+		
 		// Add the menu layout
 		if ($this->tmpl == 'component')
 		{

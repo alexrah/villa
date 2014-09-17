@@ -3,16 +3,18 @@
 	<params group="basic" label="COM_SIGPRO_BASIC_SETTINGS" addpath="/administrator/components/com_sigpro/elements">
 		<param name="galleries_rootfolder" type="text" default="images/stories" label="COM_SIGPRO_ROOT_FOLDER" description="COM_SIGPRO_SELECT_THE_STARTING_FOLDER_FOR_ALL_YOUR_IMAGE_GALLERIES_THIS_IS_GENERALLY_PREFERRED_TO_BE_IMAGESSTORIES_SO_YOU_CAN_EASILY_USE_THE_JOOMLA_MEDIA_MANAGER_TO_UPLOAD_YOUR_IMAGES_INTO_SUBFOLDERS_WITHIN_THIS_FOLDER_EG_INSIDE_IMAGESSTORIESGALLERIESSOMEIMAGEGALLERY" />
 		<param name="popup_engine" type="list" default="jquery_fancybox" label="COM_SIGPRO_POPUP_ENGINE_FOR_IMAGE_GALLERIES" description="COM_SIGPRO_DEPENDING_ON_WHAT_JAVASCRIPT_LIBRARYFRAMEWORK_YOU_USE_IN_YOUR_SITE_CHOOSE_AN_APPROPRIATE_POPUP_ENGINE_TO_ACHIEVE_MAXIMUM_COMPATIBILITY_AND_AVOID_ANY_JAVASCRIPT_CONFLICTS_POPUP_ENGINES_NOT_BASED_ON_JQUERY_OR_MOOTOOLS_WILL_GENERALLY_BE_NEUTRAL_ON_ALL_JOOMLA_WEBSITES">
-			<option value="jquery_fancybox">COM_SIGPRO_PE_FANCYBOX_POWERED_BY_JQUERY</option>
-			<option value="jquery_colorbox">COM_SIGPRO_PE_COLORBOX_POWERED_BY_JQUERY</option>
-			<option value="jquery_prettyphoto">COM_SIGPRO_PE_PRETTYPHOTO_POWERED_BY_JQUERY</option>
-			<option value="jquery_lightview">COM_SIGPRO_PE_LIGHTVIEW_POWERED_BY_JQUERY</option>
-			<option value="jquery_slimbox">COM_SIGPRO_PE_SLIMBOX2_POWERED_BY_JQUERY</option>
-			<option value="jquery_fresco">COM_SIGPRO_PE_FRESCO_POWERED_BY_JQUERY</option>
-			<option value="jquery_swipebox">COM_SIGPRO_PE_SWIPEBOX_POWERED_BY_JQUERY</option>
-			<option value="highslide">COM_SIGPRO_PE_HIGHSLIDE_WITH_SLIDESHOW</option>
-			<option value="lytebox">COM_SIGPRO_PE_LYTEBOX_WITH_SLIDESHOW</option>
-			<option value="simplebox">COM_SIGPRO_PE_SIMPLEBOX_BY_JOOMLAWORKS</option>
+			<option value="jquery_fancybox">COM_SIGPRO_PE_FANCYBOX</option>
+			<option value="jquery_colorbox">COM_SIGPRO_PE_COLORBOX</option>
+			<option value="jquery_prettyphoto">COM_SIGPRO_PE_PRETTYPHOTO</option>
+			<option value="jquery_lightview">COM_SIGPRO_PE_LIGHTVIEW</option>
+			<option value="jquery_slimbox">COM_SIGPRO_PE_SLIMBOX</option>
+			<option value="jquery_fresco">COM_SIGPRO_PE_FRESCO</option>
+			<option value="jquery_swipebox">COM_SIGPRO_PE_SWIPEBOX</option>
+			<option value="jquery_nivolightbox">COM_SIGPRO_PE_NIVOLIGHTBOX</option>
+			<option value="jquery_magnificpopup">COM_SIGPRO_PE_MAGNIFICPOPUP</option>
+			<option value="highslide">COM_SIGPRO_PE_HIGHSLIDE</option>
+			<option value="lytebox">COM_SIGPRO_PE_LYTEBOX</option>
+			<option value="simplebox">COM_SIGPRO_PE_SIMPLEBOX</option>
 		</param>
 		<param name="jQueryHandling" type="list" default="1.8" label="COM_SIGPRO_JQUERY_HANDLING" description="COM_SIGPRO_JQUERY_HANDLING_DESC">
 			<option value="0">COM_SIGPRO_DO_NOT_LOAD_THE_JQUERY_LIBRARY</option>
@@ -20,8 +22,10 @@
 			<option value="1.6">COM_SIGPRO_LOAD_V1_6_X_LATEST_COPY</option>
 			<option value="1.7">COM_SIGPRO_LOAD_V1_7_X_LATEST_COPY</option>
 			<option value="1.8">COM_SIGPRO_LOAD_V1_8_X_LATEST_COPY</option>
-			<option value="1.9">COM_SIGPRO_LOAD_V1_9_X_LATEST_COPY</option>
-			<option value="1">COM_SIGPRO_LOAD_LATEST_COPY</option>
+			<option value="1.9.1">COM_SIGPRO_LOAD_V1_9_X_LATEST_COPY</option>
+			<option value="1.10.2">COM_SIGPRO_LOAD_V1_10_X_LATEST_COPY</option>
+			<option value="1.11.1">COM_SIGPRO_LOAD_V1_11_X_LATEST_COPY</option>
+			<option value="1.11.1">COM_SIGPRO_LOAD_LATEST_COPY</option>
 		</param>
 		<param name="thb_template" type="template" directory="/plugins/content/jw_sigpro/tmpl" default="Classic" hide_default="1" hide_none="1" label="COM_SIGPRO_LAYOUT_TEMPLATE_FOR_IMAGE_GALLERIES" description="COM_SIGPRO_CHOOSE_A_TEMPLATE_TO_DISPLAY_YOUR_IMAGE_GALLERIES" />
 		<param name="thb_width" type="text" default="200" size="3" label="COM_SIGPRO_THUMBNAIL_VIEWPORT_WIDTH" description="COM_SIGPRO_ADJUST_THE_MAXIMUM_IMAGE_THUMBNAIL_WIDTH_IN_PIXELS" />
@@ -71,16 +75,18 @@
 	<fieldset label="COM_SIGPRO_BASIC_SETTINGS" name="basic" addfieldpath="/administrator/components/com_sigpro/elements">
 		<field name="galleries_rootfolder" type="text" default="images" label="COM_SIGPRO_ROOT_FOLDER" description="COM_SIGPRO_SELECT_THE_STARTING_FOLDER_FOR_ALL_YOUR_IMAGE_GALLERIES_THIS_IS_GENERALLY_PREFERRED_TO_BE_IMAGESSTORIES_SO_YOU_CAN_EASILY_USE_THE_JOOMLA_MEDIA_MANAGER_TO_UPLOAD_YOUR_IMAGES_INTO_SUBFOLDERS_WITHIN_THIS_FOLDER_EG_INSIDE_IMAGESSTORIESGALLERIESSOMEIMAGEGALLERY" />
 		<field name="popup_engine" type="list" default="jquery_fancybox" label="COM_SIGPRO_POPUP_ENGINE_FOR_IMAGE_GALLERIES" description="COM_SIGPRO_DEPENDING_ON_WHAT_JAVASCRIPT_LIBRARYFRAMEWORK_YOU_USE_IN_YOUR_SITE_CHOOSE_AN_APPROPRIATE_POPUP_ENGINE_TO_ACHIEVE_MAXIMUM_COMPATIBILITY_AND_AVOID_ANY_JAVASCRIPT_CONFLICTS_POPUP_ENGINES_NOT_BASED_ON_JQUERY_OR_MOOTOOLS_WILL_GENERALLY_BE_NEUTRAL_ON_ALL_JOOMLA_WEBSITES">
-			<option value="jquery_fancybox">COM_SIGPRO_PE_FANCYBOX_POWERED_BY_JQUERY</option>
-			<option value="jquery_colorbox">COM_SIGPRO_PE_COLORBOX_POWERED_BY_JQUERY</option>
-			<option value="jquery_prettyphoto">COM_SIGPRO_PE_PRETTYPHOTO_POWERED_BY_JQUERY</option>
-			<option value="jquery_lightview">COM_SIGPRO_PE_LIGHTVIEW_POWERED_BY_JQUERY</option>
-			<option value="jquery_slimbox">COM_SIGPRO_PE_SLIMBOX2_POWERED_BY_JQUERY</option>
-			<option value="jquery_fresco">COM_SIGPRO_PE_FRESCO_POWERED_BY_JQUERY</option>
-			<option value="jquery_swipebox">COM_SIGPRO_PE_SWIPEBOX_POWERED_BY_JQUERY</option>
-			<option value="highslide">COM_SIGPRO_PE_HIGHSLIDE_WITH_SLIDESHOW</option>
-			<option value="lytebox">COM_SIGPRO_PE_LYTEBOX_WITH_SLIDESHOW</option>
-			<option value="simplebox">COM_SIGPRO_PE_SIMPLEBOX_BY_JOOMLAWORKS</option>
+			<option value="jquery_fancybox">COM_SIGPRO_PE_FANCYBOX</option>
+			<option value="jquery_colorbox">COM_SIGPRO_PE_COLORBOX</option>
+			<option value="jquery_prettyphoto">COM_SIGPRO_PE_PRETTYPHOTO</option>
+			<option value="jquery_lightview">COM_SIGPRO_PE_LIGHTVIEW</option>
+			<option value="jquery_slimbox">COM_SIGPRO_PE_SLIMBOX</option>
+			<option value="jquery_fresco">COM_SIGPRO_PE_FRESCO</option>
+			<option value="jquery_swipebox">COM_SIGPRO_PE_SWIPEBOX</option>
+			<option value="jquery_nivolightbox">COM_SIGPRO_PE_NIVOLIGHTBOX</option>
+			<option value="jquery_magnificpopup">COM_SIGPRO_PE_MAGNIFICPOPUP</option>
+			<option value="highslide">COM_SIGPRO_PE_HIGHSLIDE</option>
+			<option value="lytebox">COM_SIGPRO_PE_LYTEBOX</option>
+			<option value="simplebox">COM_SIGPRO_PE_SIMPLEBOX</option>
 		</field>
 		<field name="jQueryHandling" type="list" default="1.8" label="COM_SIGPRO_JQUERY_HANDLING" description="COM_SIGPRO_JQUERY_HANDLING_DESC">
 			<option value="0">COM_SIGPRO_DO_NOT_LOAD_THE_JQUERY_LIBRARY</option>
@@ -88,8 +94,10 @@
 			<option value="1.6">COM_SIGPRO_LOAD_V1_6_X_LATEST_COPY</option>
 			<option value="1.7">COM_SIGPRO_LOAD_V1_7_X_LATEST_COPY</option>
 			<option value="1.8">COM_SIGPRO_LOAD_V1_8_X_LATEST_COPY</option>
-			<option value="1.9">COM_SIGPRO_LOAD_V1_9_X_LATEST_COPY</option>
-			<option value="1">COM_SIGPRO_LOAD_LATEST_COPY</option>
+			<option value="1.9.1">COM_SIGPRO_LOAD_V1_9_X_LATEST_COPY</option>
+			<option value="1.10.2">COM_SIGPRO_LOAD_V1_10_X_LATEST_COPY</option>
+			<option value="1.11.1">COM_SIGPRO_LOAD_V1_11_X_LATEST_COPY</option>
+			<option value="1.11.1">COM_SIGPRO_LOAD_LATEST_COPY</option>
 		</field>
 		<field name="thb_template" type="template" directory="/plugins/content/jw_sigpro/jw_sigpro/tmpl" default="Classic" hide_default="1" hide_none="1" label="COM_SIGPRO_LAYOUT_TEMPLATE_FOR_IMAGE_GALLERIES" description="COM_SIGPRO_CHOOSE_A_TEMPLATE_TO_DISPLAY_YOUR_IMAGE_GALLERIES" />
 		<field name="thb_width" type="text" default="200" size="3" label="COM_SIGPRO_THUMBNAIL_VIEWPORT_WIDTH" description="COM_SIGPRO_ADJUST_THE_MAXIMUM_IMAGE_THUMBNAIL_WIDTH_IN_PIXELS" />

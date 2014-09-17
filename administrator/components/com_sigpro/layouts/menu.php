@@ -3,12 +3,13 @@
  * @version		$Id$
  * @package		Simple Image Gallery Pro
  * @author		JoomlaWorks - http://www.joomlaworks.net
- * @copyright	Copyright (c) 2006 - 2013 JoomlaWorks Ltd. All rights reserved.
+ * @copyright	Copyright (c) 2006 - 2014 JoomlaWorks Ltd. All rights reserved.
  * @license		http://www.joomlaworks.net/license
  */
 
 // no direct access
 defined('_JEXEC') or die ;
+
 ?>
 <div class="sigProMainMenu sigFloatRight">
 	<ul class="sigThin sigLightMenu">
@@ -18,6 +19,11 @@ defined('_JEXEC') or die ;
 		<?php if (JFile::exists(JPATH_SITE.'/components/com_k2/k2.php')): ?>
 		<li>
 			<a href="index.php?option=com_sigpro&amp;view=galleries&amp;type=k2" class="sigProMenuItems"><i class="sig-icon sig-icon-picture"></i><?php echo JText::_('COM_SIGPRO_K2_GALLERIES'); ?></a>
+		</li>
+		<?php endif; ?>
+		<?php if($isSuperUser): ?>
+		<li>
+			<a href="index.php?option=com_sigpro&amp;view=galleries&amp;type=users" class="sigProMenuItems"><i class="sig-icon sig-icon-picture"></i><?php echo JText::_('COM_SIGPRO_USER_GALLERIES'); ?></a>
 		</li>
 		<?php endif; ?>
 		<li>

@@ -4,10 +4,10 @@
 	<author>JoomlaWorks</author>
 	<authorEmail>please-use-the-contact-form@joomlaworks.net</authorEmail>
 	<authorUrl>www.joomlaworks.net</authorUrl>
-	<creationDate>August 23rd, 2013</creationDate>
-	<copyright>Copyright (c) 2006 - 2013 JoomlaWorks Ltd.</copyright>
+	<creationDate>June 27th, 2014</creationDate>
+	<copyright>Copyright (c) 2006 - 2014 JoomlaWorks Ltd.</copyright>
 	<license>http://www.joomlaworks.net/license</license>
-	<version>3.0.3</version>
+	<version>3.0.6</version>
 	<description>JW_SIGP_XML_DESC</description>
 	<files>
 		<filename plugin="jw_sigpro">jw_sigpro.php</filename>

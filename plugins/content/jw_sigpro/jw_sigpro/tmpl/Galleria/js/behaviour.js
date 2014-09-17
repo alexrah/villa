@@ -1,8 +1,8 @@
 /**
- * @version		$Id: behaviour.js 2725 2013-04-06 17:05:49Z joomlaworks $
+ * @version		3.0.x
  * @package		Simple Image Gallery Pro
  * @author		JoomlaWorks - http://www.joomlaworks.net
- * @copyright	Copyright (c) 2006 - 2013 JoomlaWorks Ltd. All rights reserved.
+ * @copyright	Copyright (c) 2006 - 2014 JoomlaWorks Ltd. All rights reserved.
  * @license		http://www.joomlaworks.net/license
  */
 
@@ -14,7 +14,7 @@ jQuery(document).ready(function($){
 		event.preventDefault();
 
 		// Prevent clicks upon animation
-		if($(':animated').length) return false;
+		if($('.sigProGalleriaPlaceholderContainer :animated').length) return false;
 
 		// Assign element
 		var el = $(this);
@@ -24,22 +24,22 @@ jQuery(document).ready(function($){
 		var placeholderContainer = outerContainer.find(".sigProGalleriaPlaceholderContainer div:first");
 
 		// Placeholder elements
-	  var targetLink = placeholderContainer.find("a:first");
-	  var targetTitle = placeholderContainer.find("p:first");
-	  var targetImg = targetLink.find("img:first");
+		var targetLink = placeholderContainer.find("a:first");
+		var targetTitle = placeholderContainer.find("p:first");
+		var targetImg = targetLink.find("img:first");
 
 		// Source elements
-	  var sourceLinkHref = el.attr("href");
-	  var sourceLinkTitle = el.attr("title");
-	  var sourceImage = el.find("img:first");
+		var sourceLinkHref = el.attr("href");
+		var sourceLinkTitle = el.attr("title");
+		var sourceImage = el.find("img:first");
 
-	  if(targetLink.attr("href")!==sourceLinkHref && targetLink.hasClass('sigProGalleriaTargetLink')){
+		if(targetLink.attr("href")!==sourceLinkHref && targetLink.hasClass('sigProGalleriaTargetLink')){
 
-		  if(el.find("span:nth-child(2)")){
-		  	var sourceTitle = el.find(".sigProCaption").html();
-		  } else {
-		  	var sourceTitle = false;
-		  }
+			if(el.find("span:nth-child(2)")){
+				var sourceTitle = el.find(".sigProCaption").html();
+			} else {
+				var sourceTitle = false;
+			}
 
 			placeholderContainer.animate({'opacity':0},300,function(){
 				targetImg.attr("src",sourceLinkHref);
@@ -56,7 +56,7 @@ jQuery(document).ready(function($){
 				});
 			}); //.delay(500).animate({'opacity':1},300);
 
-	  }
+		}
 
 		// Set class for current thumb
 		var thumbs = outerContainer.find("ul:first").find("a");

@@ -1,9 +1,9 @@
 <?php
 /**
- * @version		$Id: download.php 2725 2013-04-06 17:05:49Z joomlaworks $
+ * @version		3.0.x
  * @package		Simple Image Gallery Pro
  * @author		JoomlaWorks - http://www.joomlaworks.net
- * @copyright	Copyright (c) 2006 - 2013 JoomlaWorks Ltd. All rights reserved.
+ * @copyright	Copyright (c) 2006 - 2014 JoomlaWorks Ltd. All rights reserved.
  * @license		http://www.joomlaworks.net/license
  */
 
@@ -98,14 +98,17 @@ if (strpos($pathToSourceFile, '..') !== false || strpos($pathToSourceFile, './')
 	exit ;
 }
 
-// Reference the "/images" or "/media/k2/galleries" directory
+// Reference allowed directories here
 $ref_com_content = $siteUrl.'/'.substr(str_replace(DS, '/', $pathToSourceFile), 0, strlen('images/'));
 $check_com_content = $siteUrl."/images/";
 
 $ref_com_k2 = $siteUrl.'/'.substr(str_replace(DS, '/', $pathToSourceFile), 0, strlen('media/k2/galleries/'));
 $check_com_k2 = $siteUrl."/media/k2/galleries/";
 
-if (isset($pathToSourceFile) && ($ref_com_content === $check_com_content || $ref_com_k2 === $check_com_k2))
+$ref_com_sigpro = $siteUrl.'/'.substr(str_replace(DS, '/', $pathToSourceFile), 0, strlen('media/jw_sigpro/users/'));
+$check_com_sigpro = $siteUrl."/media/jw_sigpro/users/";
+
+if (isset($pathToSourceFile) && ($ref_com_content === $check_com_content || $ref_com_k2 === $check_com_k2 || $ref_com_sigpro === $check_com_sigpro))
 {
 	$getfile = $pathToSourceFile;
 }

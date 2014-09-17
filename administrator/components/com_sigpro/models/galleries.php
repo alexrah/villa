@@ -1,9 +1,9 @@
 <?php
 /**
- * @version		$Id: galleries.php 3213 2013-06-11 10:10:48Z lefteris.kavadas $
+ * @version		3.0.x
  * @package		Simple Image Gallery Pro
  * @author		JoomlaWorks - http://www.joomlaworks.net
- * @copyright	Copyright (c) 2006 - 2013 JoomlaWorks Ltd. All rights reserved.
+ * @copyright	Copyright (c) 2006 - 2014 JoomlaWorks Ltd. All rights reserved.
  * @license		http://www.joomlaworks.net/license
  */
 
@@ -22,7 +22,12 @@ class SigProModelGalleries extends SigProModel
 			$this->setState('total', 0);
 			return $galleries;
 		}
-		$folders = JFolder::folders($path, '.', true, true, array('.svn', 'CVS', '.DS_Store', '__MACOSX'));
+		$folders = JFolder::folders($path, '.', true, true, array(
+			'.svn',
+			'CVS',
+			'.DS_Store',
+			'__MACOSX'
+		));
 		foreach ($folders as $folder)
 		{
 			$basename = basename($folder);
@@ -43,7 +48,10 @@ class SigProModelGalleries extends SigProModel
 
 			if (count($images) || $labels)
 			{
-				$relativeFolder = JString::str_ireplace(array($path.DIRECTORY_SEPARATOR, $path.'/'), '', $folder);
+				$relativeFolder = JString::str_ireplace(array(
+					$path.DIRECTORY_SEPARATOR,
+					$path.'/'
+				), '', $folder);
 				// Replace forward slashes when we are under Windows Servers
 				$relativeFolder = JString::str_ireplace(DIRECTORY_SEPARATOR, '/', $relativeFolder);
 				$gallery = new JObject;
@@ -52,7 +60,19 @@ class SigProModelGalleries extends SigProModel
 				$application = JFactory::getApplication();
 				if ($application->isSite() && $this->getState('type') == 'site')
 				{
-					$gallery->set('insertPath', '/media/jw_sigpro/users/'.SigProHelper::getUserFolder().'/'.$relativeFolder);
+					$user = JFactory::getUser();
+					if (version_compare(JVERSION, '2.5', 'ge'))
+					{
+						$isAdmin = $user->authorise('core.admin', 'com_sigpro');
+					}
+					else
+					{
+						$isAdmin = $user->gid == 25;
+					}
+					if (!$isAdmin)
+					{
+						$gallery->set('insertPath', '/media/jw_sigpro/users/'.SigProHelper::getUserFolder().'/'.$relativeFolder);
+					}
 				}
 				$gallery->set('path', SigProHelper::getHTTPPath($folder));
 				$gallery->set('title', basename($folder));
@@ -149,11 +169,17 @@ class SigProModelGalleries extends SigProModel
 		$this->setState('orderingDir', $options[1]);
 		if ($this->getState('ordering') == 'folder')
 		{
-			usort($galleries, array($this, 'sortByTitle'));
+			usort($galleries, array(
+				$this,
+				'sortByTitle'
+			));
 		}
 		else
 		{
-			usort($galleries, array($this, 'sortByDate'));
+			usort($galleries, array(
+				$this,
+				'sortByDate'
+			));
 		}
 		if ($this->getState('orderingDir') == 'DESC')
 		{
