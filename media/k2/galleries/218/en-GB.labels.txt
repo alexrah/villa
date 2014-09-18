@@ -1,6 +1,6 @@
-villa_floris21.jpg||
-villa_floris23.jpg||
-villa_floris26.jpg||
-villa_floris29.jpg||
-villa_floris35.jpg||
-villa_floris34.jpg||
+villa_floris21.jpg|Second double bed|
+villa_floris23.jpg|Guest room|
+villa_floris26.jpg|Master bedroom|
+villa_floris29.jpg|Looking towards the terrace|
+villa_floris34.jpg|Relax area|
+villa_floris35.jpg|Entertainment zone|

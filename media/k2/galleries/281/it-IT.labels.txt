@@ -1,0 +1,6 @@
+climb-castelbianco.jpg|Castelbianco (SV)|
+climb-castelbianco2.jpg|Castelbianco (SV)|
+climb-feglino.jpg|Feglino, Finale Ligure (SV)|
+climb-finale.jpg|Feglino, Finale Ligure (SV)|
+climb-grotta_edera.jpg|Grotta dell' Edera, Finale Ligure (SV)|
+climb-noli.jpg|Noli (SV)|

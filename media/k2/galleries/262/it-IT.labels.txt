@@ -1,0 +1,3 @@
+villa_floris16.jpg|Sala da pranzo|
+villa_floris18.jpg|Salotto|
+villa_floris20.jpg|Area Living|

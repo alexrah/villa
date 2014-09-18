@@ -1,0 +1,3 @@
+golf-caddy.jpeg|Caddy|
+golf-pads.jpeg|Pads|
+golf-zbunker.jpeg|Bunker|

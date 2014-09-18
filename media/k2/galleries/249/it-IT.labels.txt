@@ -1,0 +1,3 @@
+bussana-chiesa.jpg|La vecchia chiesa|
+bussana-satiro.png|Satiro|
+bussana-scultore.jpg|Scultore|
